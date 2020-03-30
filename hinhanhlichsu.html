@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hào Hùng Sử Ta</title>
+  <script src="https://kit.fontawesome.com/f1bce2ab63.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="SASS/suviet.css">
+  <script>document.getElementsByTagName("html")[0].className += " js";</script>
+  <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+  <div class="nava">
+    <!-- <img src="./images/2.jpg" alt=""> -->
+    <!-- <iframe width="100%" height="500px" src="https://www.youtube.com/embed/sMeWmUlzz74" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+    <!-- <span>Việt Sử Kiêu Hùng</span> -->
+    <video id="videoBG" src="./video-bg.mp4" autoplay height="100%" width="100%" muted></video>
+    <div onclick="tonglevideo()" class="btn">
+      <i class="far fa-play-circle"></i>
+    </div>
+  </div>
+  <nav id="navbar" class="nav-top">
+    <div class="nav-top-img">
+      <a target="_blank" href="https://vietsukieuhung.com/"><img src="./images/VSKH_logo_menu.png" alt=""></a>
+    </div>
+    <ul id="navpc" class="nav-top-menu nav-pc">
+      <li class="nav-top-menu-item">
+        <a class="hover-border" href="index-suviet.html">Trang chủ</a>
+      </li>
+      <li class="nav-top-menu-item">
+        <a class="hover-border" href="#">Giới thiệu</a>
+      </li>
+      <li class="nav-top-menu-item">
+        <a class="hover-border" href="#">Sự kiện lịch sử</a>
+      </li>
+      <li class="nav-top-menu-item">
+        <a class="hover-border" href="#">Nhân vật lịch sử</a>
+      </li>
+      <li class="nav-top-menu-item">
+        <a class="hover-border" href="#">Địa danh lịch sử</a>
+      </li>
+      <li class="nav-top-menu-item">
+        <a class="hover-border" href="#">Hình ảnh lịch sử</a>
+      </li>
+      <li class="nav-top-menu-item">
+        <a class="hover-border" href="#">Liên hệ</a>
+      </li>
+    </ul>
+    <div onclick="openNav()" class="humberger"><i class="fas fa-bars"></i></div>
+    <div id="mySidebar" class="nav-hidden">
+      <div class="nav-hidden-title">
+        <img src="./images/VSKH_logo_menu.png" alt="">
+        <p onclick="closeNav()">x</p>
+      </div>
+      <div class="nav-hidden-item">
+        <li><a href="#"><span>Trang chủ</span> </a></li>
+        <li><a href="#">Giới thiệu</a></li>
+        <li><a href="#">Sự kiện lịch sử</a></li>
+        <li><a href="#">Nhân vật lịch sử</a></li>
+        <li><a href="#">Địa danh lịch sử</a></li>
+        <li><a href="#">Hình ảnh lịch sử</a></li>
+        <li><a href="#">Liên hệ</a></li>
+      </div>
+    </div>
+
+  </nav>
+  <!-- menu cho mobile co monitor  nho hon 768px------------------------------------------------------------->
+  <div id="mobile" class="nav-mobile">
+    <div class="nav-mobile-content">
+      <div class="nav-mobile-menu">
+        <!-- 1  menu cha ---------------------------------------------------------------------------->
+        <div class="nav-mobile-item" id="trangchu">
+          <a onclick="toggleMenu()" class="tongle-menu" href="#trangchu"><i class="fas fa-home"></i>Trang chủ</a>
+          <div class="nav-mobile-item-sub-menu">
+            <a href="#">1 </a>
+            <a href="#">2</a>
+          </div>
+        </div>
+
+        <div class="nav-mobile-item" id="gioithieu">
+          <a class="tongle-menu" href="#gioithieu"><i class="fas fa-biohazard"></i>Giới thiệu</a>
+          <div class="nav-mobile-item-sub-menu">
+            <a href="#">3 </a>
+            <a href="#">4</a>
+          </div>
+        </div>
+
+        <div class="nav-mobile-item" id="sukien">
+          <a class="tongle-menu" href="#sukien"><i class="fas fa-user-astronaut"></i>Sự kiện lịch sử</a>
+          <div class="nav-mobile-item-sub-menu">
+            <a href="#">5 </a>
+            <a href="#">6</a>
+          </div>
+        </div>
+
+        <div class="nav-mobile-item" id="nhanvat">
+          <a class="tongle-menu" href="#nhanvat"><i class="fas fa-user-secret"></i>Nhân vật lịch sử</a>
+          <div class="nav-mobile-item-sub-menu">
+            <a href="#">Giới thiệu lịch sử </a>
+            <a href="#">Thông tin lịch sử</a>
+          </div>
+        </div>
+
+        <div class="nav-mobile-item" id="diadanh">
+          <a class="tongle-menu" href="#diadanh"><i class="far fa-envelope"></i>Địa danh lịch sử</a>
+          <div class="nav-mobile-item-sub-menu">
+            <a href="#">Giới thiệu lịch sử </a>
+            <a href="#">Thông tin lịch sử</a>
+          </div>
+        </div>
+
+        <div class="nav-mobile-item" id="hinhanh">
+          <a class="tongle-menu" href="#hinhanh"><i class="far fa-address-card"></i>Hình ảnh lịch sử</a>
+          <div class="nav-mobile-item-sub-menu">
+            <a href="#">Giới thiệu lịch sử </a>
+            <a href="#">Thông tin lịch sử</a>
+          </div>
+        </div>
+
+        <div class="nav-mobile-item" id="lienhe">
+          <a class="tongle-menu" href="#lienhe"><i class="far fa-envelope"></i>Liên hệ</a>
+          <div class="nav-mobile-item-sub-menu">
+            <a href="#">Giới thiệu lịch sử </a>
+            <a href="#">Thông tin lịch sử</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="main-title">
+    <div class="main-title-wrap">
+      <a href="">Tóm lược lịch sử việt nam qua các thời đại</a>
+    </div>
+  </div>
+  <!--timelone start ---------------------------------------------->
+  <!-- <div class="xemthem">
+    <a href="">Tóm lược lịch sử việt nam qua các thời đại</a><i class="fas fa-chevron-right"></i>
+  </div> -->
+  <section style="position: relative; margin: 0;" class="cd-h-timeline js-cd-h-timeline margin-bottom-md">
+
+    <div class="cd-h-timeline__container container">
+      <div class="cd-h-timeline__dates">
+        <div class="cd-h-timeline__line">
+          <ol>
+            <li><a href="#0" data-date="16/01/2014" class="cd-h-timeline__date cd-h-timeline__date--selected">Hồng Bàng
+                Văn Lang</a></li>
+            <li><a href="#0" data-date="28/02/2014" class="cd-h-timeline__date">Âu Lạc & Nam Việt</a></li>
+            <li><a href="#0" data-date="20/04/2014" class="cd-h-timeline__date">Bắc Thuộc Lần I</a></li>
+            <li><a href="#0" data-date="20/05/2014" class="cd-h-timeline__date">Trưng Nữ Vương</a></li>
+            <li><a href="#0" data-date="09/07/2014" class="cd-h-timeline__date">Bắc Thuộc Lần II</a></li>
+            <li><a href="#0" data-date="30/08/2014" class="cd-h-timeline__date">Nhà Lý & Nhà Triệu</a></li>
+            <li><a href="#0" data-date="15/09/2014" class="cd-h-timeline__date">Bắc Thuộc Lần III</a></li>
+            <li><a href="#0" data-date="01/11/2014" class="cd-h-timeline__date">Thời Ký Xây Dựng Nền Tự Chủ</a></li>
+            <li><a href="#0" data-date="10/12/2014" class="cd-h-timeline__date">Nhà Ngô</a></li>
+            <li><a href="#0" data-date="19/01/2015" class="cd-h-timeline__date">Nhà Đinh</a></li>
+            <li><a href="#0" data-date="03/03/2015" class="cd-h-timeline__date">Nhà Tiền Lê</a></li>
+            <li><a href="#0" data-date="03/03/2015" class="cd-h-timeline__date">Nhà Lý</a></li>
+            <li><a href="#0" data-date="03/03/2015" class="cd-h-timeline__date">Nhà Trần</a></li>
+            <li><a href="#0" data-date="03/03/2015" class="cd-h-timeline__date">Nhà Hồ</a></li>
+            <li><a href="#0" data-date="03/03/2015" class="cd-h-timeline__date">Nhà Hậu Trần</a></li>
+            <li><a href="#0" data-date="03/03/2015" class="cd-h-timeline__date">Bắc Thuộc Lần IV</a></li>
+            <li><a href="#0" data-date="03/03/2015" class="cd-h-timeline__date">Nhà Hậu Lê</a></li>
+            <li><a href="#0" data-date="03/03/2015" class="cd-h-timeline__date">Nam Bắc Triều</a></li>
+            <li><a href="#0" data-date="03/03/2015" class="cd-h-timeline__date">Trịnh Nguyễn Phân Tranh</a></li>
+            <li><a href="#0" data-date="03/03/2015" class="cd-h-timeline__date">Nhà Tây Sơn</a></li>
+            <li><a href="#0" data-date="03/03/2015" class="cd-h-timeline__date">Nhà Nguyễn</a></li>
+            <li><a href="#0" data-date="03/03/2015" class="cd-h-timeline__date">Pháp Thuộc</a></li>
+            <li><a href="#0" data-date="03/03/2015" class="cd-h-timeline__date">Việt Nam Dân Chủ Cộng Hòa</a></li>
+            <li><a href="#0" data-date="03/03/2015" class="cd-h-timeline__date">Cộng Hòa Xã Hội Chủ Nghĩa Việt Nam</a>
+            </li>
+          </ol>
+
+          <span class="cd-h-timeline__filling-line" aria-hidden="true"></span>
+        </div> <!-- .cd-h-timeline__line -->
+      </div> <!-- .cd-h-timeline__dates -->
+
+      <ul>
+        <li><a href="#0"
+            class="text-replace cd-h-timeline__navigation cd-h-timeline__navigation--prev cd-h-timeline__navigation--inactive">Prev</a>
+        </li>
+        <li><a href="#0" class="text-replace cd-h-timeline__navigation cd-h-timeline__navigation--next">Next</a></li>
+      </ul>
+    </div> <!-- .cd-h-timeline__container -->
+
+    <div class="cd-h-timeline__events">
+      <ol>
+        <li class="cd-h-timeline__event cd-h-timeline__event--selected text-component">
+          <div class="cd-h-timeline__event-content container">
+            <h2 class="cd-h-timeline__event-title">Hồng Bàng Văn Lang</h2>
+            <em class="cd-h-timeline__event-date">Năm 256 - TCN</em>
+            <p class="cd-h-timeline__event-description color-contrast-medium">
+              <pre>
+                  Thời kỳ Hồng Bàng theo truyền thuyết và dã sử cho rằng bắt đầu từ năm 2879 TCN, là niên đại của Kinh Dương Vương, với quốc hiệu Xích Quỷ. Lãnh thổ của quốc gia dưới thời Kinh Dương vương rộng lớn, phía bắc tới sông Dương Tử (cả vùng hồ Động Đình), phía nam tới nước Hồ Tôn (Chiêm Thành), phía đông là Đông Hải (một phần của Thái Bình Dương), phía tây là Ba Thục (Tứ Xuyên, Trung Hoa ngày nay). Về sau người Việt chỉ thấy có ở miền Bắc Việt Nam ngày nay, có thể một phần do sự lấn áp của các tộc người Hoa Hạ từ phương Bắc.
+                  Có ít nhất 18 đời Hùng Vương cai trị trong thời đại Hồng Bàng, cho đến năm 258 TCN. Các thông tin về các đời vua Hùng dựa nhiều trên các truyền thuyết. Cũng có nhiều bằng chứng khảo cổ học như trống đồng Đông Sơn được tìm thấy ở miền bắc Việt Nam có cùng niên đại với thời kỳ Hồng Bàng, thể hiện một nền văn hóa đồ đồng rất phát triển (văn hoá Đông Sơn).
+                </pre>
+            </p>
+          </div>
+        </li>
+        <!---->
+        <li class="cd-h-timeline__event text-component">
+          <div class="cd-h-timeline__event-content container">
+            <h2 class="cd-h-timeline__event-title">Âu lạc & Nam việt</h2>
+            <em class="cd-h-timeline__event-date">257 TCN - 208 TCN</em>
+            <p class="cd-h-timeline__event-description color-contrast-medium">
+              <pre>
+                    Theo hai bộ sử ký Đại Việt sử ký toàn thư (viết ở thế kỷ 15) và Đại Việt sử lược (viết ở thế kỷ 13), thì nhà nước Âu Lạc được Thục Phán (thủ lĩnh bộ tộc Âu Việt) thành lập vào năm 258 TCN sau khi đánh bại vị vua Hùng cuối cùng của nước Văn Lang, ông lên ngôi và lấy niên hiệu là An Dương Vương.
+
+                  An Dương Vương sát nhập lãnh thổ của Văn Lang và lãnh thổ của bộ tộc mình (Âu Việt) và hình thành nên một nhà nước mới là Âu Lạc (kết hợp giữa người Âu Việt và người Lạc Việt)
+                  
+                  Lãnh thổ Âu Lạc gồm lãnh cũ của bộ tộc Âu Việt ở phía bắc, mà ngày nay là một phần phía nam tỉnh Quảng Tây (Trung Quốc) và lãnh thổ của Văn Lang ở miền bắc Việt Nam. Âu Lạc có ranh giới phía bắc là sông Tả Giang (Quảng Tây) đến phía nam là dãy núi Hoành Sơn ở Hà Tĩnh hiện nay
+                  </pre>
+            </p>
+          </div>
+        </li>
+
+        <li class="cd-h-timeline__event text-component">
+          <div class="cd-h-timeline__event-content container">
+            <h2 class="cd-h-timeline__event-title">Bắc Thuộc Lần I</h2>
+            <em class="cd-h-timeline__event-date">218 TCN - 179 TCN</em>
+            <p class="cd-h-timeline__event-description color-contrast-medium">
+              <pre>
+                    Thời kỳ Bắc thuộc lần thứ nhất trong lịch sử Việt Nam kéo dài từ năm 218 TCN hoặc 179 TCN hoặc 111 TCN đến năm 39, dưới sự cai trị của phong kiến Trung Quốc.
+                  </pre>
+            </p>
+          </div>
+        </li>
+
+        <li class="cd-h-timeline__event text-component">
+          <div class="cd-h-timeline__event-content container">
+            <h2 class="cd-h-timeline__event-title">Trưng Nữ Vương</h2>
+            <em class="cd-h-timeline__event-date">Năm 40- Năm 43</em>
+            <p class="cd-h-timeline__event-description color-contrast-medium">
+              <pre>
+                    Hai Bà Trưng (40 - 43) là thời kỳ xen giữa Bắc thuộc lần 1 và Bắc thuộc lần 2 trong lịch sử Việt Nam. Đây là tên gọi chung của hai chị em Trưng Trắc và Trưng Nhị, là anh hùng dân tộc của người Việt, những thủ lĩnh khởi binh chống lại nhà Đông Hán của Trung Quốc, lập ra một quốc gia với kinh đô tại Mê Linh và tự phong là Nữ vương.
+                  </pre>
+            </p>
+          </div>
+        </li>
+
+        <li class="cd-h-timeline__event text-component">
+          <div class="cd-h-timeline__event-content container">
+            <h2 class="cd-h-timeline__event-title">Bắc Thuộc Lần II</h2>
+            <em class="cd-h-timeline__event-date">Năm 43- Năm 543</em>
+            <p class="cd-h-timeline__event-description color-contrast-medium">
+              <pre>
+                    Thời kỳ Bắc thuộc lần thứ hai trong lịch sử Việt Nam kéo dài từ năm 43 đến năm 543. Thời kỳ này bắt đầu khi Mã Viện theo lệnh Hán Quang Vũ Đế nhà Đông Hán đánh chiếm lại bộ Giao Chỉ từ tay Trưng Vương, kéo dài đến khi Lý Bí khởi binh đánh đuổi thứ sử[1] nhà Lương là Tiêu Tư năm 542 rồi lập ra nước Vạn Xuân năm 544.
+                  Thời kỳ Bắc thuộc lần thứ 2 kéo dài khoảng 500 năm.
+                  Trải qua các triều đại như Đông Hán, Đông Ngô, Tấn, Lưu Tống, Nam Tề, Lương. Tiêu biểu trong thời kỳ này có cuộc khởi nghĩa của bà Triệu năm 248 chống lại Đông Ngô, cuộc khởi nghĩa của anh em Lý Trường Nhân – Lý Thúc Hiến từ 468 đến 485 chống lại nhà Lưu Tống, Nam Tề
+                  </pre>
+            </p>
+          </div>
+        </li>
+
+        <li class="cd-h-timeline__event text-component">
+          <div class="cd-h-timeline__event-content container">
+            <h2 class="cd-h-timeline__event-title">Nhà Lý & Nhà Triệu</h2>
+            <em class="cd-h-timeline__event-date">Năm 544 - Năm 602</em>
+            <p class="cd-h-timeline__event-description color-contrast-medium">
+              <pre>
+                    Năm 542 Lý Bí khởi nghĩa đánh bại nhà Lương. 
+Lý Nam Đế (544-548) : sau 3 lần đánh bại được quân của nhà Lương đến mùa xuân 544, Lý Bí xưng đế tức Lý Nam Đế, đặt tên nước là Vạn Xuân. 
+
+Triệu Việt Vương (548-571) : năm 545 nhà Lương lại cử quân sang đánh nước Vạn Xuân, Lý Nam Đế liên tục thua trận nên đã rút về động Khuất Lão và trao binh quyền cho Triệu Quang Phục. Năm 548, ông bị bệnh nặng và mất, Triệu Quang Phục lên thay lấy hiệu Triệu Việt Vương, tiếp tục lãnh đạo nhân dân đấu tranh chống lại nhà Lương. Cuối năm 550 Triệu Quang Phục đánh bại quân nhà Lương, khôi phục nước Vạn Xuân. 
+
+Lý Phật Tử (571-602) : năm 546 khi Lý Nam Đế thua trận và phải rút quân về động Khuất Lão, anh trai của Lý Nam Đế là Lý Thiên Bảo cùng vị tướng Lý Phật Tử mang 3 vạn quân ra đánh Đức Châu (Nghệ An) nhưng bị quân nhà Lương đánh bại nên phải thu thập tàn quân chạy sang đất người Di Lạo ở Ai Lao xây đắp thành trì để ở. Tại đây Lý Thiên Bảo tự xưng là Đào Lang Vương, đặt tên nước là Dã Năng. Năm 555 Đào Lang Vương mất, mọi người tôn Lý Phật Tử lên thay. Năm 557, Lý Phật Tử kéo quân về Vạn Xuân gây chiến với Triệu Quang Phục. Năm 571, Lý Phật Tử đã đánh bại Triệu Quang Phục, tự xưng là Nam Đế (nên sử sách gọi là Hậu Lý Nam Đế).
+                  </pre>
+            </p>
+          </div>
+        </li>
+
+        <li class="cd-h-timeline__event text-component">
+          <div class="cd-h-timeline__event-content container">
+            <h2 class="cd-h-timeline__event-title">Bắc Thuộc Lần III</h2>
+            <em class="cd-h-timeline__event-date">Năm 602 - Năm 905</em>
+            <p class="cd-h-timeline__event-description color-contrast-medium">
+              <pre>
+                    Năm 581 ở Trung Quốc nhà Tùy thành lập. Năm 602, vua Tùy đem quân đánh nước ta. Lý Phật Tử xin hàng, nước ta lại rơi vào tay ngoại bang phương Bắc lần nữa. Sau đó nhà Đường lên thay nhà Tùy cai trị nước ta. 
+Mai Hắc Đế (713-722) : Năm 713, Mai Thúc Loan lãnh đạo nghĩa quân khởi nghĩa ở Hoan Châu chống lại ách đô hộ nhà Đường và giành được thắng lợi. Ông lên ngôi vua, xưng là Mai Hắc Đế. Năm 722, nhà Đường sai 10 vạn quân sang đánh nước ta. Sau nhiều trận đánh khốc liệt, Mai Hắc Đế thất trận, ông rút quân vào rừng lâm bệnh nặng rồi mất. Tương truyền con trai thứ 3 của ông là Mai Thúc Huy lên thay lấy hiệu là Mai Thiếu Đế và tiếp tục chống trả quân nhà Đường đến năm 723 thì tan rã. Nước ta lại rơi vào tay nhà Đường. 
+Trong thời kỳ này có nhiều cuộc khởi nghĩa nông dân, tiêu biểu : khởi nghĩa Phùng Hưng (766-791), khởi nghĩa Dương Thanh (819-820). 
+                  </pre>
+            </p>
+          </div>
+        </li>
+
+        <li class="cd-h-timeline__event text-component">
+          <div class="cd-h-timeline__event-content container">
+            <h2 class="cd-h-timeline__event-title">Thời KÌ Xây Dựng Nền Tự Chủ</h2>
+            <em class="cd-h-timeline__event-date">Năm 905-938</em>
+            <p class="cd-h-timeline__event-description color-contrast-medium">
+              <pre>
+                    Tự chủ là thời kỳ đầu khôi phục lại nền độc lập của Việt Nam đầu thế kỷ 10 sau hơn 1000 năm Bắc thuộc. Thời kỳ này người Việt đã tự cai trị lãnh thổ nhưng chưa xưng làm vua, và chưa đặt quốc hiệu. Bề ngoài, Việt Nam vẫn là một phần lãnh thổ của "thiên triều" phương bắc ở trung nguyên với tên gọi "Tĩnh Hải quân" và người đứng đầu chỉ nối tiếp nhau làm chức Tiết độ sứ như một quan cai trị của Trung Quốc trước đây.
+
+Thời kỳ tự chủ bắt đầu từ khi họ Khúc nổi dậy nắm quyền thay các Tiết độ sứ người Trung Quốc (905) và kết thúc khi Ngô Quyền tiêu diệt Kiều Công Tiễn và đánh thắng quân Nam Hán, lập ra nhà Ngô (938).
+                  </pre>
+            </p>
+          </div>
+        </li>
+
+        <li class="cd-h-timeline__event text-component">
+          <div class="cd-h-timeline__event-content container">
+            <h2 class="cd-h-timeline__event-title">Nhà Ngô</h2>
+            <em class="cd-h-timeline__event-date">Năm 939-965</em>
+            <p class="cd-h-timeline__event-description color-contrast-medium">
+              <pre>
+                    Nhà Ngô 26 năm (939-965), kinh đô Cổ Loa (Đông Anh, Hà Nội)
+
+                    Ngô Vương (939-944) : năm 938 Dương Đình Nghệ bị Kiều Công Tiễn giết chết để đoạt chính quyền. Con rể của Dương Đình Nghệ là Ngô Quyền khởi binh trừng phạt. Kiều Công Tiễn bỏ chạy sang cầu cứu với Nam Hán. Năm 938, Nam Hán kéo quân sang nước ta. Lúc này, Ngô Quyền đã diệt được Kiều Công Tiễn và bố trí trận địa chờ sẵn. Khi quân Nam Hán đến cửa sông Bạch Đằng đã bị quân ta đánh cho tan tác phải tháo chạy về nước. Năm 939, Ngô Quyền xưng vương. 
+
+                    Dương Bình Vương (944-950) : năm 944 Ngô Quyền mất ủy thác con trưởng là Ngô Xương Ngập cho em vợ là Dương Tam Kha. Kha cướp ngôi Ngập và xưng là Dương Bình Vương. Dương Tam Kha nhận con trai thứ của Ngô Quyền là Ngô Xương Văn làm con nuôi với ý định truyền trả lại ngôi vương cho nhà họ Ngô. 
+                    
+                    Hậu Ngô Vương (944-965) : năm 950 Dương Tam Kha phái Ngô Xương Văn đi đánh phản loạn ở Thái Bình. Xương Văn đem quân đánh úp trở lại Dương Tam Kha giành lại chính quyền tuy nhiên ông không giết Dương Tam Kha mà chỉ giáng xuống làm Chương Dương Công. Ông tự xưng Nam Tấn Vương và cho đón anh trai mình là Ngô Xương Ngập về. Xương Ngập là người ti tiện sau khi trở về cậy mình là đích trưởng cũng tự xưng là Thiên Sách Vương. Bấy giờ đất nước có 2 vua cùng trị vì. Xương Ngập chuyên quyền, không cho Xương Văn tham gia chính sự và có ý định trừ khử Xương Văn nhưng việc chưa thành thì đến năm 954 Xương Ngập bệnh nặng và mất. Năm 965, khi mang quân đi dẹp loạn ở Thái Bình, Xương Văn bị trúng nỏ tử trận. Con của Xương Ngập là Ngô Xương Xí lên thay nhưng thế lực yếu kém.Đất nước lúc bấy giờ hình thành 12 sứ quân.
+                  </pre>
+            </p>
+          </div>
+        </li>
+
+        <li class="cd-h-timeline__event text-component">
+          <div class="cd-h-timeline__event-content container">
+            <h2 class="cd-h-timeline__event-title">Nhà Đinh</h2>
+            <em class="cd-h-timeline__event-date">Năm 960-980</em>
+            <p class="cd-h-timeline__event-description color-contrast-medium">
+              <pre>
+                    Nhà Đinh (968-980) là triều đại phong kiến trong lịch sử Việt Nam bắt đầu năm 968, sau khi Đinh Tiên Hoàng dẹp xong loạn 12 sứ quân thống nhất đất nước và kết thúc năm 980 khi con của Đinh Tiên Hoàng là Đinh Phế Đế nhường cho Lê Hoàn.
+
+Nhà Đinh là triều đại mở đầu chế độ phong kiến tập quyền và thời kỳ tự chủ với một chế độ đứng đầu bởi một Hoàng đế của nước Việt Nam. Vương triều nhà Đinh đã mở nền chính thống cho thời đại phong kiến độc lập nên trong các bộ chính sử kể từ Đại Việt sử ký toàn thư thế kỷ XV, Đại Việt sử ký tiền biên thế kỷ XVIII đến Khâm định Việt sử thông giám cương mục thế kỷ XIX; triều đại này đều được các tác giả lấy làm mốc mở đầu phần Bản kỷ hoặc Chính biên.
+
+Tiếp đến, việc xưng đế hiệu Đại Thắng Minh Hoàng đế của Đinh Tiên Hoàng mang ý thức lớn về sự tự tôn của nước Việt, có hàm ý so sánh với các Hoàng đế Trung Hoa.
+                  </pre>
+            </p>
+          </div>
+        </li>
+
+        <li class="cd-h-timeline__event text-component">
+          <div class="cd-h-timeline__event-content container">
+            <h2 class="cd-h-timeline__event-title">Nhà Tiền Lê</h2>
+            <em class="cd-h-timeline__event-date">Năm 980 - 1009</em>
+            <p class="cd-h-timeline__event-description color-contrast-medium">
+              <pre>
+                    Lê Đại Hành (980-1005) : bấy giờ nhà Tống hay tin Đinh Tiên Hoàng đã băng hà nên đã cử quân sang xâm lược nước ta. Với sự hậu thuẫn của Thái hậu Dương Vân Nga, triều thần đã tôn Lê Hoàn lên ngôi, tức là Đại Hành Hoàng đế. Với tài năng của mình, ông đã lãnh đạo quân đội đánh tan quân xâm lược nhà Tống. Ông là người có công lớn trong việc “Kháng Tống, Bình Chiêm” để giữ yên bờ cõi. 
+
+Lê Trung Tông (1005) : sau khi Lê Đại Hành băng hà, các con tranh giành nhau ngôi vị dẫn đến cốt nhục tương tàn. Lê Long Việt sau khi đánh đuổi được Long Ngân, đã lên ngôi hoàng đế, tức Lê Trung Tông. Nhưng chỉ 3 ngày sau, em của ông là Lê Long Đĩnh sai người ám sát. 
+
+Lê Ngọa Triều (1005-1009) : sau khi giết anh mình là Lê Long Việt. Lê Long Đĩnh lên ngôi, tức Lê Ngọa Triều. Ông được sử sách ghi nhận là người dâm đãng, tàn bạo và độc ác. Do ăn chơi trác táng, Long Đĩnh đã bệnh nặng và mất năm 1009 kết thúc triều đại tiền Lê. 
+                  </pre>
+            </p>
+          </div>
+        </li>
+        <li class="cd-h-timeline__event text-component">
+          <div class="cd-h-timeline__event-content container">
+            <h2 class="cd-h-timeline__event-title">Nhà Lý</h2>
+            <em class="cd-h-timeline__event-date">Năm 1010-1225</em>
+            <p class="cd-h-timeline__event-description color-contrast-medium">
+              <pre>
+                    Nhà Lý (1010-1225), quốc hiệu Đại Cồ Việt, kinh đô Hoa Lư. Năm 1010 dời đô về Thăng Long. Từ 1054 đổi quốc hiệu là Đại Việt
+
+                    Nhà Lý bắt đầu khi Lý Công Uẩn lên ngôi vào tháng 10 âm lịch năm 1009, sau khi giành được quyền lực từ tay nhà Tiền Lê.
+                    
+                    Trong thời đại này, lần đầu tiên nhà Lý đã giữ vững được chính quyền một cách lâu dài đến hơn 200 năm, khác với các vương triều cũ trước đó chỉ tồn tại hơn vài chục năm. Vào năm 1054, Lý Thánh Tông đã đổi quốc hiệu từ Đại Cồ Việt thành Đại Việt, mở ra kỷ nguyên Đại Việt rực rỡ trong lịch sử Việt Nam.
+                    
+                    Trong nước, mặc dù các vị Hoàng đế đều sùng bái Phật giáo nhưng ảnh hưởng của Nho giáo cũng rất cao với việc mở các trường đại học đầu tiên là Văn miếu (1070) và Quốc tử giám (1076) và các khoa thi để chọn người hiền tài không có nguồn gốc xuất thân là quý tộc ra giúp nước. 
+                  </pre>
+            </p>
+          </div>
+        </li>
+        <li class="cd-h-timeline__event text-component">
+          <div class="cd-h-timeline__event-content container">
+            <h2 class="cd-h-timeline__event-title">Nhà Trần</h2>
+            <em class="cd-h-timeline__event-date">Năm 1225 - 1440</em>
+            <p class="cd-h-timeline__event-description color-contrast-medium">
+              <pre>
+                    Nhà Trần 175 năm (1225 - 1400), quốc hiệu Đại Việt, kinh đô Thăng Long
+
+Nhà Trần là triều đại quân chủ chuyên chế trong lịch sử Việt Nam, bắt đầu khi Trần Cảnh lên ngôi vào năm 1225, sau khi được Lý Chiêu Hoàng truyền ngôi. Trong giai đoạn nắm giữ quyền lực, nhà Trần vẫn đóng đô ở Thăng Long - kinh đô triều cũ, tiếp tục mở rộng và phát triển sự hưng thịnh có từ đời nhà Lý. 
+
+Dưới triều Trần, lực lượng quân đội đặc biệt được chú trọng phát triển đủ sức đánh dẹp các cuộc nội loạn và đương đầu với quân đội các nước xung quanh. Chính sách chia thực ấp cho các thân tộc trong họ, mỗi thế lực trong dòng tộc đều có quân đội tinh nhuệ là nền tản lớn khiến quân đội nhà Trần tiêu diệt được cuộc xâm phạm của quân đội Nhà Nguyên, Đế quốc Mông Cổ qua 3 lần vào năm 1258, 1285 và 1287. Thời gian này xuất hiện một danh tướng kiệt xuất là Hưng Đạo đại vương Trần Quốc Tuấn; người có vai trò quan trọng trong chiến thắng vào năm 1285 và 1287
+                  </pre>
+            </p>
+          </div>
+        </li>
+        <li class="cd-h-timeline__event text-component">
+          <div class="cd-h-timeline__event-content container">
+            <h2 class="cd-h-timeline__event-title">Nhà Hồ</h2>
+            <em class="cd-h-timeline__event-date">Năm 1400 - 1407</em>
+            <p class="cd-h-timeline__event-description color-contrast-medium">
+              <pre>
+                    Nhà Hồ (1400-1407): quốc hiệu Đại Ngu, kinh đô Tây Đô (Thanh Hóa)
+
+                    Nhà Hồ bắt đầu khi Hồ Quý Ly lên ngôi năm 1400 sau khi giành được quyền lực từ tay nhà Trần và chấm dứt khi Hồ Hán Thương bị quân Minh bắt vào năm 1407 – tổng cộng là 7 năm. Quốc hiệu Đại Việt đã đổi thành Đại Ngu năm 1400.
+                  </pre>
+            </p>
+          </div>
+        </li>
+        <li class="cd-h-timeline__event text-component">
+          <div class="cd-h-timeline__event-content container">
+            <h2 class="cd-h-timeline__event-title">Nhà Hậu Trần</h2>
+            <em class="cd-h-timeline__event-date">Năm 1407 - 1413</em>
+            <p class="cd-h-timeline__event-description color-contrast-medium">
+              <pre>
+                    Nhà Hậu Trần (1407 - 1413) do Giản Định đế - Trần Ngỗi thành lập tháng 10 âm lịch năm 1407 tại Ninh Bình sau khi nhà nước Đại Ngu của nhà Hồ bị quân đội nhà Minh xâm chiếm và tiêu diệt. Trong thời kỳ này, nước Đại Ngu bị nhà Minh đổi tên trở lại thành Giao Chỉ.
+
+                    Do quân mới lập, Giản Định đế phải chạy vào Nghệ An, viên Đại tri châu Hóa châu là Đặng Tất giết quan nhà Minh, dẫn quân từ Hóa châu ra theo phò, nhà Hậu Trần làm chủ từ Nghệ An vào Thăng Hoa. Năm 1408, quân Hậu Trần tiến quân ra Bắc, đánh bại quân Minh ở trận Bô Cô, bao vây các thành. Năm 1409, Giản Định đế giết 2 tướng Đặng Tất, Nguyễn Cảnh Chân, khiến cho 2 người con của họ là Đặng Dung và Nguyễn Cảnh Dị bất mãn, kéo quân mình trở về Nghệ An lập Trần Quý Khoáng lên làm Trùng Quang đế. Trùng Quang đế sai Nguyễn Súy bắt được Giản Định đế tôn làm Thượng hoàng, chia quân đánh quân Minh. Quân Minh sau khi được tăng viện liền tiến hành chiến tranh, quân nhà Hậu Trần sau những chiến thắng ban đầu, dần thất thế, phải lui về Nam và thất bại hoàn toàn vào năm 1414. 
+                  </pre>
+            </p>
+          </div>
+        </li>
+        <li class="cd-h-timeline__event text-component">
+          <div class="cd-h-timeline__event-content container">
+            <h2 class="cd-h-timeline__event-title">Bắc Thuộc Lần IV</h2>
+            <em class="cd-h-timeline__event-date">Năm 1428</em>
+            <p class="cd-h-timeline__event-description color-contrast-medium">
+              <pre>
+                    Sau khi chiếm được Đại Việt, quân Minh chia nước ta thành quận huyện để cai trị. Chúng bắt nhân dân ta làm tôi tớ, thuế má lao dịch nặng nề, cuộc sống vô cùng cực khổ.
+
+                    Ngày Mậu Thân, tháng Giêng năm Mậu Tuất (7/2/1418), Lê Lợi phất cờ khởi nghĩa ở hương Lam Sơn, huyện Lương Giang, trấn Thanh Hoá. Có quân sư Nguyễn Trãi dâng sách Bình Ngô nhằm thu phục lòng người, cháu nội của quan Tư đồ Trần Nguyên Đán là Trần Nguyên Hãn và nhiều nhân tài, hào kiệt các nơi tham gia. 
+                    
+                    Ngày 3/1/1428, nghĩa quân hoàn toàn thắng lợi, Lê Lợi lên ngôi Hoàng đế, lập nên triều đại nhà Lê. Sử gọi là Hậu Lê để phân biệt với Tiền Lê 980-1009 do Lê Hoàn sáng lập. 
+                  </pre>
+            </p>
+          </div>
+        </li>
+        <li class="cd-h-timeline__event text-component">
+          <div class="cd-h-timeline__event-content container">
+            <h2 class="cd-h-timeline__event-title">Nhà Hậu Lê</h2>
+            <em class="cd-h-timeline__event-date">Năm 1427 - 1789</em>
+            <p class="cd-h-timeline__event-description color-contrast-medium">
+              <pre>
+                    Nhà Hậu Lê (1427-1789) do Lê Thái Tổ lập ra, được phân biệt với nhà Tiền Lê (980-1009) do Lê Đại Hành lập ra cuối thế kỷ 10. Nhà Hậu Lê gồm có 2 giai đoạn:
+
+                    - Nhà Lê sơ (1428-1527): kéo dài 100 năm, bắt đầu từ khi khởi nghĩa Lam Sơn thắng lợi, Lê Lợi gạt bỏ vua bù nhìn Trần Cảo, tự làm vua, lập ra triều đại mới và kết thúc khi quyền thần Mạc Đăng Dung phế bỏ vua Lê Cung Hoàng lập ra nhà Mạc.
+                    
+                    - Nhà Lê trung hưng(1533-1789): kéo dài 256 năm, bắt đầu từ khi Thượng tướng quân Nguyễn Kim lập tông thất Lê Duy Ninh lên ngôi, tức Lê Trang Tông tại Ai Lao để khôi phục nhà Hậu Lê; kết thúc khi Lê Chiêu Thống chạy sang lưu vong tại Trung Quốc dưới thời Thanh Cao Tông.
+                    
+                    Cách gọi nhà Hậu Lê bao gồm cả hai giai đoạn Lê sơ và Lê trung hưng. Đặc biệt, thời Lê Trung hưng tuy kéo dài nhưng các Hoàng đế nhà Lê mất thực quyền, chỉ tồn tại trên danh nghĩa. Thời kỳ đầu gọi là Nam Bắc triều, nhà Lê và nhà Mạc chia đôi nước Đại Việt. 
+                  </pre>
+            </p>
+          </div>
+        </li>
+        <li class="cd-h-timeline__event text-component">
+          <div class="cd-h-timeline__event-content container">
+            <h2 class="cd-h-timeline__event-title">Năm Bắc Triều</h2>
+            <em class="cd-h-timeline__event-date">Năm 1527 - 1592</em>
+            <p class="cd-h-timeline__event-description color-contrast-medium">
+              <pre>
+                    Mạc Đăng Dung, sau khi dẹp được các bè phái trong cung đình, đã ép vua Lê Cung Hoàng nhà Hậu Lê nhường ngôi tháng 6 năm 1527 và chấm dứt khi vua Mạc Mậu Hợp bị quân đội Lê-Trịnh do Trịnh Tùng chỉ huy đánh bại vào cuối năm 1592– tổng cộng thời gian tồn tại chính thức của triều đại là gần 66 năm.
+
+                    Tuy nhiên, giai đoạn sau đó hậu duệ nhà Mạc như Mạc Kính Cung, Mạc Kính Khoan, Mạc Kính Vũ vẫn còn tiếp tục chống lại nhà Hậu Lê thời kỳ trung hưng đến tận năm 1677 tại khu vực Cao Bằng.
+                    
+                    Thời kỳ 1533-1592 trong lịch sử Việt Nam còn được gọi là thời kỳ Nam-Bắc triều, do chính quyền nhà Mạc chỉ thực sự có quyền lực từ địa phận Ninh Bình ngày nay trở ra, còn từ Thanh Hóa trở vào là thế lực lấy danh nghĩa gây dựng lại nhà Lê từ năm 1533. 
+                  </pre>
+            </p>
+          </div>
+        </li>
+
+        <li class="cd-h-timeline__event text-component">
+          <div class="cd-h-timeline__event-content container">
+            <h2 class="cd-h-timeline__event-title">Trịnh Nguyễn Phân Tranh</h2>
+            <em class="cd-h-timeline__event-date">Năm 1593 - 1778</em>
+            <p class="cd-h-timeline__event-description color-contrast-medium">
+              <pre>
+                    Trịnh-Nguyễn phân tranh là thời kỳ phân chia giữa chế độ "vua Lê chúa Trịnh" ở phía Bắc sông Gianh (sử gọi là Đàng Ngoài) và chúa Nguyễn cai trị ở miền Nam (Đàng Trong), mở đầu khi Trịnh Tráng đem quân đánh Nguyễn Phúc Nguyên năm 1627 và kết thúc vào cuối thế kỷ 18 khi nhà Tây Sơn đánh đổ cả chúa Nguyễn lẫn chúa Trịnh.
+
+                    Ban đầu, cả thế lực họ Trịnh và họ Nguyễn đều mang khẩu hiệu "phù Lê diệt Mạc" để lấy lòng thiên hạ và thề trung thành với triều Hậu Lê. Sau khi nhà Mạc đã bị đánh đổ, trên danh nghĩa, cả Chúa Trịnh và Chúa Nguyễn đều là bề tôi của nhà Hậu Lê, cả Đàng Trong lẫn Đàng Ngoài đều là lãnh thổ của nhà Lê. Nhưng trên thực tế thì khác, cả hai đều tạo thế lực cát cứ cho riêng mình, vua nhà Hậu Lê đã không còn thực quyền nên không chặn được sự phân tranh giữa hai họ Trịnh - Nguyễn. Nước Đại Việt trong giai đoạn này bị chia cách hơn 150 năm. 
+                  </pre>
+            </p>
+          </div>
+        </li>
+
+        <li class="cd-h-timeline__event text-component">
+          <div class="cd-h-timeline__event-content container">
+            <h2 class="cd-h-timeline__event-title">Nhà Tây Sơn</h2>
+            <em class="cd-h-timeline__event-date">Năm 1778 - 1802</em>
+            <p class="cd-h-timeline__event-description color-contrast-medium">
+              <pre>
+                    Nhà Tây Sơn (1778 - 1802), được thành lập trong bối cảnh tranh chấp quyền lực cuối thời Lê Trung Hưng. 
+
+                    Theo cách gọi của phần lớn sử gia thì "nhà Tây Sơn" được dùng để gọi triều đại của anh em Nguyễn Nhạc, Nguyễn Lữ và Nguyễn Huệ để phân biệt với nhà Nguyễn của Nguyễn Ánh (vì cùng họ Nguyễn).
+
+                    Một trong những công tích lớn nhất của nhà Tây Sơn trong lịch sử dân tộc là đã tiến đến rất gần công cuộc thống nhất và đồng thời mở rộng lãnh thổ đất nước sau hàng trăm năm Việt Nam bị chia cắt bởi các cuộc tranh giành quyền lực giữa các thế lực lớn Mạc-Trịnh-Nguyễn kể từ khi nhà Lê sơ bị sụp đổ. Tuy nhiên việc vua Quang Trung (Nguyễn Huệ) đột ngột qua đời khi còn khá trẻ đã khiến ưu thế của Tây Sơn chuyển vào tay Nguyễn Ánh, một hậu duệ của Chúa Nguyễn cũng sinh trưởng trên đất Đàng Trong trong thế kỷ 18 với nhiều biến động lớn của lịch sử. Triều đại Tây Sơn tồn tại khoảng 24 năm thì sụp đổ sau khi chúa Nguyễn Ánh tiến hành một cuộc chiến tranh toàn diện để tiêu diệt nhà Tây Sơn và thành lập nhà Nguyễn.  
+                  </pre>
+            </p>
+          </div>
+        </li>
+
+        <li class="cd-h-timeline__event text-component">
+          <div class="cd-h-timeline__event-content container">
+            <h2 class="cd-h-timeline__event-title">Nhà Nguyễn</h2>
+            <em class="cd-h-timeline__event-date">Năm 1802 - 1945</em>
+            <p class="cd-h-timeline__event-description color-contrast-medium">
+              <pre>
+                    Nhà Nguyễn (1802 - 1945) được thành lập sau khi vua Gia Long lên ngôi năm 1802, là triều đại cuối cùng trong lịch sử Việt Nam. Năm 1802 đến năm 1804 sử dụng quốc hiệu Nam Việt, năm 1804 đến năm 1839 sử dụng quốc hiệu Việt Nam, Đại Việt Nam, năm 1839, vua Minh Mạng đổi quốc hiệu là Đại Nam. Triều Nguyễn là một triều đại đánh dấu nhiều thăng trầm của lịch sử, đặc biệt là cuộc xâm lược của người Pháp giữa thế kỷ 19.
+
+                    Triều Nguyễn được coi là trải qua hai giai đoạn chính:
+
+                    - Giai đoạn thứ nhất (1802-1858) là giai đoạn độc lập, các vua nhà Nguyễn nắm toàn quyền quản lý đất nước, trải qua 4 đời vua, Gia Long, Minh Mạng, Thiệu Trị, Tự Đức.
+
+                    - Giai đoạn thứ hai, (1858-1945) là giai đoạn bị Pháp xâm lăng và đô hộ, kể từ khi quân Pháp đánh Đà Nẵng và kết thúc sau khi hoàng đế Bảo Đại thoái vị vào năm 1945.
+                  </pre>
+            </p>
+          </div>
+        </li>
+
+        <li class="cd-h-timeline__event text-component">
+          <div class="cd-h-timeline__event-content container">
+            <h2 class="cd-h-timeline__event-title">Pháp Thuộc</h2>
+            <em class="cd-h-timeline__event-date">Năm 1883 - 1945</em>
+            <p class="cd-h-timeline__event-description color-contrast-medium">
+              <pre>
+                    Pháp thuộc là một giai đoạn trong lịch sử Việt Nam kéo dài 61 năm, bắt đầu từ 1884 khi Pháp ép triều đình Huế chấp nhận sự bảo hộ của Pháp cho đến 1945 khi Pháp mất quyền cai trị ở Đông Dương. Tuy nhiên, nhiều tài liệu khác cho rằng thời kỳ Pháp thuộc cần được tính từ năm 1867 (tức là kéo dài gần 80 năm), khi Nam Kỳ Lục tỉnh bị nhà Nguyễn cắt nhượng cho Pháp, trở thành lãnh thổ đầu tiên Pháp chiếm được trong quá trình Pháp xâm lược Đại Nam.
+
+                    Trong thời kỳ này Việt Nam bị chia cắt thành 3 xứ riêng biệt với ba cơ cấu hành chính riêng: xứ thuộc địa Nam Kỳ và hai xứ bảo hộ Bắc và Trung Kỳ. Cao Miên (Campuchia), Ai Lao cũng chịu sự cai trị của Pháp, và nhượng địa Quảng Châu Loan tiếp theo bị gom vào Liên bang Đông Dương.
+
+                    Tháng 9 năm 1945, Pháp đem quân trở lại tấn công Việt Nam, nhưng người Việt Nam phản kháng quyết liệt và Pháp đã bị thất bại sau 9 năm chiến tranh. Pháp buộc phải công nhận nền độc lập của Việt Nam (cũng như Lào và Campuchia), chính thức chấm dứt thời kỳ Pháp thuộc, đồng thời kéo theo sự sụp đổ hệ thống thuộc địa của Pháp và các nước thực dân khác trên khắp thế giới vào thập niên 1950 - 1960.
+                  </pre>
+            </p>
+          </div>
+        </li>
+
+        <li class="cd-h-timeline__event text-component">
+          <div class="cd-h-timeline__event-content container">
+            <h2 class="cd-h-timeline__event-title">Việt Nam Dân Chủ Cộng Hòa</h2>
+            <em class="cd-h-timeline__event-date">Năm 1945 - 1976</em>
+            <p class="cd-h-timeline__event-description color-contrast-medium">
+              <pre>
+                    Ngày 3/2/1930, Đảng cộng sản Đông Dương ra đời. Dưới sự lãnh đạo của lãnh tụ Nguyễn Ái Quốc, dân tộc ta đã khởi nghĩa làm cuộc Cách mạng tháng Tám (19-8-1945) thành công, đánh đổ đế quốc Pháp và phát xít Nhật.
+
+                    Ngày 2/9/1945, Chủ tịch Hồ Chí Minh đọc Tuyên ngôn độc lập tại Quảng trường Ba Đình (lịch sử gọi đây là bản tuyên ngôn độc lập lần thứ 3 của Tổ quốc ta) lập nên nước Việt Nam dân chủ cộng hoà với thủ đô là thành phố Hà Nội, mở đầu một kỷ nguyên mới trong lịch sử dân tộc ta. 
+                  </pre>
+            </p>
+          </div>
+        </li>
+
+        <li class="cd-h-timeline__event text-component">
+          <div class="cd-h-timeline__event-content container">
+            <h2 class="cd-h-timeline__event-title">Cộng Hòa Xã Hội Chủ Nghĩa Việt Nam</h2>
+            <em class="cd-h-timeline__event-date">Năm 1976 - nay</em>
+            <p class="cd-h-timeline__event-description color-contrast-medium">
+              <pre>
+                    MCộng Hòa Xã Hội Chủ Nghĩa Việt Nam (1976 – nay) : năm 1954, VNDCCH đã đánh tan ý chí xâm lược lần 2 của thực dân Pháp bằng chiến thắng Điện Biên Phủ vang dội khắp 5 châu, buộc Pháp phải ngồi vào bàn ký hiệp định Geneve công nhận độc lập chủ quyền và rút quân ra khởi Đông Dương. Cũng trong năm này Mỹ đã thay chân Pháp nhảy vào miền Nam, thành lập chính phủ bù nhìn Việt Nam Cộng Hòa. Sau khi tiến hành nhiều cuộc chiến tranh mà không dành được thắng lợi đến năm 1973 Mỹ buộc phải ngồi vào bàn ký hiệp định Paris. Hiệp định này có ý nghĩa để Mỹ rút chân ra khỏi miền Nam Việt Nam trong danh dự. Năm 1975, quân giải phóng miền Nam đã tiến hành tổng tiến công và nổi dậy vào Sài Gòn, đánh đổ chính quyền VNCH, thống nhất đất nước. Năm 1976, tên nước chính thức là Cộng Hòa Xã Hội Chủ Nghĩa Việt Nam, Đảng Lao Động Việt Nam được đổi thành Đảng Cộng Sản Việt Nam, thủ đô là Hà Nội, Sài Gòn được đổi tên thành Thành phố Hồ Chí Minh. 
+                  </pre>
+            </p>
+          </div>
+        </li>
+
+      </ol>
+    </div> <!-- .cd-h-timeline__events -->
+    <div class="bg-chim">
+      <img src="./images/bg-trongdong.jpg" alt="">
+    </div>
+  </section>
+  <!--timelone end ---------------------------------------------->
+  <div class="main-contain">
+    <!-- content start -->
+    <div id="hinhanhlichsu" class="main-contain-content">
+      <h1 style="margin: 20px 0 50px 0;">Giới thiệu Việt Nam qua từng thời kỳ</h1>
+      <pre >
+        Dân tộc Việt Nam luôn tự hào về lịch sử hơn 4000 năm dựng nước và giữ nước của dân tộc. Tuy nhiên, thế hệ trẻ ngày nay hầu hết đều hời hợt về lịch sử của chính mình. Điển hình là trong kỳ thi tuyển sinh đại học 2011, có đến hàng ngàn bài thi lịch sử bị điểm 0. Đây là tín hiệu báo động cho ngành giáo dục nói chung và việc dạy và học môn học này nói riêng. Các bạn trẻ ngày nay hầu hết đều bị ảnh hưởng bởi “làn sóng du nhập văn hóa” ít nhiều đặc biệt là từ Trung Quốc. Điều này không phải là điều xấu, tuy nhiên một người Việt Nam biết rành về lịch sử Trung Quốc hơn lịch sử Việt Nam là vấn đề cần phải xem xét và tư duy một cách nghiêm túc. Để tiện cho việc tìm hiểu và tra cứu, tôi xin phép vắn tắt về lịch sử Việt Nam qua bài viết Tóm lược lịch sử Việt Nam qua các thời đại. 
+
+ 
+Thời tiền sử 
+
+  
+Thời đồ đá cũ : con người đã sinh sống từ hàng trăm ngàn năm trước ở lãnh thổ Việt Nam với các di tích của nền văn hóa Sơn Vi. 
+
+Thời đồ đá mới : khoảng từ 5700-15000 năm trước, tiêu biểu với nền văn hóa Hòa Bình và Bắc Sơn với nền văn minh lúa nước. 
+
+Thời đồ đồng-đá : khoảng 3500-4000 năm trước, tiêu biểu với nền văn hóa Phùng Nguyên. 
+
+Thời đồ đồng : cách đây khoảng 3000 năm trước, tiêu biểu với nền văn hóa Đồng Đậu, văn hóa Gò Mun. 
+
+Thời đồ sắt : khoảng 1200 TCN, tiêu biểu với nền văn hóa Đông Sơn, Sa Huỳnh, Óc Eo. 
+
+ 
+Thời Hồng Bàng (2879 TCN – 208 TCN) 
+
+  
+Nước Xích Quỷ : có thể coi đây là một nhà nước “liên bang” lỏng lẻo của các bộ tộc người Việt cổ, sinh sống ở vùng Lĩnh Nam. Tương truyền Đế Minh là cháu 3 đời của Viêm đế (tức Thần Nông) trong khi đi xuống phía Nam đã kết hôn với một vị tiên nữ và sinh được một người con tên là Lục Tộc. Đế Minh phong cho con trưởng là Đế Nghi làm vua phương Bắc, phong cho con thứ là Lục Tộc làm vua phương Nam lấy hiệu là Kinh Dương Vương, tên nước là Xích Quỷ. Như vậy Kinh Dương Vương chính là thủy tổ của dân tộc Việt. Kinh Dương Vương lấy con gái vua Động Đình Hồ là Long Nữ và sinh được một người con trai tên là Sùng Lãm. Sau Kinh Dương Vương truyền ngôi lại cho Sùng Lãm, tức là Lạc Long Quân. Sau Lạc Long Quân lấy một vị tiên nữ đẻ ra bọc trăm trứng nở trăm con. Đây chính là tổ tiên của người Bách Việt. 
+
+Nhà nước Văn Lang : sau thời kỳ “liên bang” tan rã, khoảng thế kỷ 7 TCN, những người Lạc Việt sống ở miền Bắc Việt Nam bi giờ đã xây dựng nhà nước cho riêng mình. Đó là nhà nước Văn Lang do các vua Hùng trị vì đóng đô tại Phong Châu (Phú Thọ ngày nay). 
+
+Nhà Thục (257 TCN – 208 TCN) : khoảng thế kỷ thứ 3 TCN, Thục Phán là thủ lĩnh của bộ tộc Âu Lạc đã cùng vua Hùng thứ 18 hợp lực đánh bại quân đội xâm lược của nhà Tần. Vua Hùng đã nhường ngôi cho Thục Phán, sáp nhập lãnh thổ hai nước Âu Việt và Lạc Việt thành Âu Lạc. Thục Phán lên ngôi vua lấy hiệu là An Dương Vương, lập nên nhà Thục, đóng đô ở Cổ Loa. 
+
+ 
+Thời Bắc thuộc lần I (208 TCN – 39) 
+
+  
+Nhà Triệu (208 TCN – 111 TCN) : Triệu Đà là quan uý quận Nam Hải (nay là Quảng Đông) nhân lúc nhà Tần suy yếu đã cát cứ quận Nam Hải sau đó đem quân đi thôn tính các lãnh thổ của Âu Lạc, Mân Việt và quận Quế Lâm thành lập nhà Triệu, đặt tên nước là Nam Việt, kinh đô là Phiên Ngưng, xưng ngang hàng với nhà Hán bên Trung Quốc. Tuy là vua ngoại tộc nhưng Triệu Đà đã đứng về phía dân tộc Việt trong cuộc chiến chống lại nhà Hán. 
+
+Thuộc Hán (111 TCN – 39) : năm 111TCN, Hán Vũ Đế đã điều hơn 10 vạn quân đi thôn tính nước Nam Việt. Bọn quan lại nhà Triệu đã quỳ gối xin hàng và Nam Việt đã bị sát nhập vào lãnh thổ của nhà Hán. Nhà Hán đã chia Nam Việt thành 9 quận bao gồm Đạm Nhĩ, Chu Nhai (đảo Hải Nam, Trung Quốc ngày nay), Nam Hải, Hợp Phố, Uất Lâm, Thương Ngô(đều thuộc Quảng Đông, Quảng Tây, Trung Quốc ngày nay), Giao Chỉ (Bắc Bộ, Việt Nam ngày nay), Cửu Chân (Thanh Hóa-Nghệ Tĩnh, Việt Nam ngày nay), Nhật Nam (Quảng Bình-Quảng Nam, Việt Nam ngày nay). Chúng đã cai trị dân ta bằng một chính sách tàn bạo và khắc nghiệt. 
+
+ 
+Trưng Nữ Vương (40 – 43) 
+
+ 
+Đây là cuộc khởi nghĩa tiêu biểu trong thời kỳ này dưới sự lãnh đạo của hai chị em Trưng Trắc và Trưng Nhị. Trong vòng 3 năm dưới sự lãnh đạo của 2 bà, quân ta đã đánh chiếm được 65 thành trì ở các quận Giao Chỉ, Cửu Chân, Nhật Nam, Hợp Phố. Sau đó nhà Hán đã sai tướng Mã Viện sang đàn áp cuộc khởi nghĩa. Do bị cô lập và quân đội còn sơ khai chưa hoàn thiện nên 2 bà đã không chống cự nổi quân của Mã Viện và đã tuẫn tiết tại sông Hát để giữ vẹn khí tiết. 
+
+ 
+Thời kỳ Bắc thuộc lần II (43 – 543) 
+
+ 
+Trải qua các triều đại như Đông Hán, Đông Ngô, Tấn, Lưu Tống, Nam Tề, Lương. Tiêu biểu trong thời kỳ này có cuộc khởi nghĩa của bà Triệu năm 248 chống lại Đông Ngô, cuộc khởi nghĩa của anh em Lý Trường Nhân – Lý Thúc Hiến từ 468 đến 485 chống lại nhà Lưu Tống, Nam Tề. 
+
+ 
+Nhà Tiền Lý (544-602) 
+
+ 
+Năm 542 Lý Bí khởi nghĩa đánh bại nhà Lương. 
+
+  
+Lý Nam Đế (544-548) : sau 3 lần đánh bại được quân của nhà Lương đến mùa xuân 544, Lý Bí xưng đế tức Lý Nam Đế, đặt tên nước là Vạn Xuân. 
+
+Triệu Việt Vương (548-571) : năm 545 nhà Lương lại cử quân sang đánh nước Vạn Xuân, Lý Nam Đế liên tục thua trận nên đã rút về động Khuất Lão và trao binh quyền cho Triệu Quang Phục. Năm 548, ông bị bệnh nặng và mất, Triệu Quang Phục lên thay lấy hiệu Triệu Việt Vương, tiếp tục lãnh đạo nhân dân đấu tranh chống lại nhà Lương. Cuối năm 550 Triệu Quang Phục đánh bại quân nhà Lương, khôi phục nước Vạn Xuân. 
+
+Lý Phật Tử (571-602) : năm 546 khi Lý Nam Đế thua trận và phải rút quân về động Khuất Lão, anh trai của Lý Nam Đế là Lý Thiên Bảo cùng vị tướng Lý Phật Tử mang 3 vạn quân ra đánh Đức Châu (Nghệ An) nhưng bị quân nhà Lương đánh bại nên phải thu thập tàn quân chạy sang đất người Di Lạo ở Ai Lao xây đắp thành trì để ở. Tại đây Lý Thiên Bảo tự xưng là Đào Lang Vương, đặt tên nước là Dã Năng. Năm 555 Đào Lang Vương mất, mọi người tôn Lý Phật Tử lên thay. Năm 557, Lý Phật Tử kéo quân về Vạn Xuân gây chiến với Triệu Quang Phục. Năm 571, Lý Phật Tử đã đánh bại Triệu Quang Phục, tự xưng là Nam Đế (nên sử sách gọi là Hậu Lý Nam Đế). 
+
+ 
+Thời kỳ Bắc thuộc lần III (602 – 905) 
+
+ 
+Năm 581 ở Trung Quốc nhà Tùy thành lập. Năm 602, vua Tùy đem quân đánh nước ta. Lý Phật Tử xin hàng, nước ta lại rơi vào tay ngoại bang phương Bắc lần nữa. Sau đó nhà Đường lên thay nhà Tùy cai trị nước ta. 
+
+  
+Mai Hắc Đế (713-722) : Năm 713, Mai Thúc Loan lãnh đạo nghĩa quân khởi nghĩa ở Hoan Châu chống lại ách đô hộ nhà Đường và giành được thắng lợi. Ông lên ngôi vua, xưng là Mai Hắc Đế. Năm 722, nhà Đường sai 10 vạn quân sang đánh nước ta. Sau nhiều trận đánh khốc liệt, Mai Hắc Đế thất trận, ông rút quân vào rừng lâm bệnh nặng rồi mất. Tương truyền con trai thứ 3 của ông là Mai Thúc Huy lên thay lấy hiệu là Mai Thiếu Đế và tiếp tục chống trả quân nhà Đường đến năm 723 thì tan rã. Nước ta lại rơi vào tay nhà Đường. 
+
+ 
+Trong thời kỳ này có nhiều cuộc khởi nghĩa nông dân, tiêu biểu : khởi nghĩa Phùng Hưng (766-791), khởi nghĩa Dương Thanh (819-820). 
+
+ 
+Thời kỳ độc lập tự chủ (905 – 938) 
+
+  
+Khúc Thừa Dụ (905-907) : năm 905 Khúc Thừa Dụ khởi nghĩa giành chính quyền, tự xưng là Tiết Độ Sứ. Nhà Đường không còn cách nào khác phải công nhận quyền tự chủ của người Việt. 
+
+Khúc Hạo (907-917) : năm 907 Khúc Thừa Dụ qua đời, con là Khúc Hạo lên thay. 
+
+Khúc Thừa Mỹ (917-930) : năm 917 Khúc Thừa Mỹ là con của Khúc Hạo lên thay cha giữ chức Tiết Độ Sứ. Vào thời gian này, chính quyền phương Bắc đang rất hỗn loạn hình thành nên cục diện Ngũ Đại Thập Quốc. Năm 930 quân Nam Hán đem quân sang đánh nước ta, Khúc Thừa Mỹ chống cự không nổi sức địch, bị bắt và giải về Phiên Ngưng. 
+
+Dương Đình Nghệ (931-938) : năm 931 Dương Đình Nghệ, là tướng cũ của của Khúc Hạo, đã đánh chiếm Giao Châu và đánh tan quân tiếp viện của Nam Hán giành lại chính quyền. Sau khi dẹp xong giặc, ông tự xưng Tiết Độ Sứ tiếp tục xây dựng nền tự chủ của nước ta. 
+
+ 
+Nhà Ngô (939 – 965) 
+
+ 
+Ngô Vương (939-944) : năm 938 Dương Đình Nghệ bị Kiều Công Tiễn giết chết để đoạt chính quyền. Con rể của Dương Đình Nghệ là Ngô Quyền khởi binh trừng phạt. Kiều Công Tiễn bỏ chạy sang cầu cứu với Nam Hán. Năm 938, Nam Hán kéo quân sang nước ta. Lúc này, Ngô Quyền đã diệt được Kiều Công Tiễn và bố trí trận địa chờ sẵn. Khi quân Nam Hán đến cửa sông Bạch Đằng đã bị quân ta đánh cho tan tác phải tháo chạy về nước. Năm 939, Ngô Quyền xưng vương. 
+
+Dương Bình Vương (944-950) : năm 944 Ngô Quyền mất ủy thác con trưởng là Ngô Xương Ngập cho em vợ là Dương Tam Kha. Kha cướp ngôi Ngập và xưng là Dương Bình Vương. Dương Tam Kha nhận con trai thứ của Ngô Quyền là Ngô Xương Văn làm con nuôi với ý định truyền trả lại ngôi vương cho nhà họ Ngô. 
+
+Hậu Ngô Vương (944-965) : năm 950 Dương Tam Kha phái Ngô Xương Văn đi đánh phản loạn ở Thái Bình. Xương Văn đem quân đánh úp trở lại Dương Tam Kha giành lại chính quyền tuy nhiên ông không giết Dương Tam Kha mà chỉ giáng xuống làm Chương Dương Công. Ông tự xưng Nam Tấn Vương và cho đón anh trai mình là Ngô Xương Ngập về. Xương Ngập là người ti tiện sau khi trở về cậy mình là đích trưởng cũng tự xưng là Thiên Sách Vương. Bấy giờ đất nước có 2 vua cùng trị vì. Xương Ngập chuyên quyền, không cho Xương Văn tham gia chính sự và có ý định trừ khử Xương Văn nhưng việc chưa thành thì đến năm 954 Xương Ngập bệnh nặng và mất. Năm 965, khi mang quân đi dẹp loạn ở Thái Bình, Xương Văn bị trúng nỏ tử trận. Con của Xương Ngập là Ngô Xương Xí lên thay nhưng thế lực yếu kém.Đất nước lúc bấy giờ hình thành 12 sứ quân. 
+
+ 
+
+Nhà Đinh (968 – 980) 
+
+  
+Đinh Tiên Hoàng (968-979) : năm 968 Vạn Thắng Vương Đinh Bộ Lĩnh dẹp xong loạn 12 sứ quân. Ông xưng đế tức Đinh Tiên Hoàng, đặt tên nước là Đại Cồ Việt, đóng đô ở Hoa Lư. 
+
+Đinh Phế Đế (979-980) : năm 979 Đinh Tiên Hoàng và con trai trưởng của mình là Đinh Liễn bị ám hại. Con trai thứ là Đinh Toàn lên thay, tức Đinh Phế Đế. Khi đó Đinh Toàn chỉ mới được 6 tuổi nên mọi quyền hành đều tập trung vào tay nhiếp chính là Thập đạo tướng quân Lê Hoàn. 
+
+ 
+Nhà Tiền Lê (980 – 1009) 
+
+  
+Lê Đại Hành (980-1005) : bấy giờ nhà Tống hay tin Đinh Tiên Hoàng đã băng hà nên đã cử quân sang xâm lược nước ta. Với sự hậu thuẫn của Thái hậu Dương Vân Nga, triều thần đã tôn Lê Hoàn lên ngôi, tức là Đại Hành Hoàng đế. Với tài năng của mình, ông đã lãnh đạo quân đội đánh tan quân xâm lược nhà Tống. Ông là người có công lớn trong việc “Kháng Tống, Bình Chiêm” để giữ yên bờ cõi. 
+
+Lê Trung Tông (1005) : sau khi Lê Đại Hành băng hà, các con tranh giành nhau ngôi vị dẫn đến cốt nhục tương tàn. Lê Long Việt sau khi đánh đuổi được Long Ngân, đã lên ngôi hoàng đế, tức Lê Trung Tông. Nhưng chỉ 3 ngày sau, em của ông là Lê Long Đĩnh sai người ám sát. 
+
+Lê Ngọa Triều (1005-1009) : sau khi giết anh mình là Lê Long Việt. Lê Long Đĩnh lên ngôi, tức Lê Ngọa Triều. Ông được sử sách ghi nhận là người dâm đãng, tàn bạo và độc ác. Do ăn chơi trác táng, Long Đĩnh đã bệnh nặng và mất năm 1009 kết thúc triều đại tiền Lê. 
+
+ 
+Nhà Lý (1009 – 1225) 
+
+  
+Lý Thái Tổ (1009-1028) : năm 1009 Lê Long Đĩnh chết, dưới sự hậu thuẫn của quan Chi hậu là Đào Cam Mộc và sư Vạn Hạnh, quần thần đã tôn quan Tả thân vệ điện tiền chỉ huy sứ Lý Công Uẩn lên ngôi hoàng đế, tức Lý Thái Tổ. Ông cho dời đô về Thăng Long và đặt niên hiệu là Thuận Thiên. 
+
+Lý Thái Tông (1028-1054) : năm 1028 Lý Thái Tổ băng hà, thái tử Lý Phật Mã dưới sự phò trợ của Vũ vệ tướng quân Lê Phụng Hiểu đã dẹp được loạn Tam vương và lên ngôi Hoàng đế, tức Lý Thái Tông. Ông là vị vua tài năng và nhân từ, có công lao rất lớn trong việc đánh Chiêm Thành rồi đánh Ai Lao mở mang bờ cõi xuống phiá Nam. 
+
+Lý Thánh Tông (1054-1072) : năm 1054 Lý Thái Tông băng hà, thái tử Lý Nhật Tôn kế ngôi hoàng đế, tức Lý Thánh Tông. Ông là vị vua tài ba xuất chúng, lại có lòng nhân từ độ lượng. Bên trong ông ổn định tình hình, bên ngoài ông chú trọng mở mang bờ cõi. Ông có công lao to lớn trong việc “phá Tống, bình Chiêm”. 
+
+Lý Nhân Tông (1072-1127) : năm 1072 Lý Thái Tông băng hà. thái tử Lý Càn Đức lên ngôi khi mới 7 tuổi, tức Lý Nhân Tông. Ông được xem là một vị minh quân của vương triều Lý. Nhờ vào sự giúp đỡ của Thái Phi Ỷ Lan làm Nhiếp chính, cùng với sự phò tá của Thái sư Lý Đạo Thành và Phụ quốc Thái úy Lý Thường Kiệt, mà nước Đại Việt đã trở thành một đế chế hùng mạnh với 2 lần đánh tan quân Tống xâm lược, đất nước phát triển đến mức cực thịnh. Ông cũng được coi là người đặt nền móng cho giáo dục đại học ở nước ta. 
+
+Lý Thần Tông (1127-1137) : năm 1127 Lý Nhân Tông băng hà, con là thái tử Lý Dương Hoán nối ngôi, tức Lý Thần Tông. Trong thời gian trị vì ông đã đánh Chân Lạp và Chiêm Thành buộc 2 nước này phải đến tiến cống. Ông cũng là vị vua gắn liền với giai thoại nhân gian “Vua hóa hổ”. Tương truyền, ông là hậu thân của thiền sư Từ Đạo Hạnh. Khi vua Lý Nhân Tông không có con để nối ngôi thì sư Từ Đạo Hạnh sau khi chết đã đầu thai làm con của Sùng Hiền Hầu là em trai vua Nhân Tông, tức Lý Dương Hoán. Do lúc sinh thời sư Từ Đạo Hạnh là người đắc đạo, biết được ác nghiệp của mình là sẽ bị hóa thành hổ nên trước khi đầu thai ông đã nhờ người bạn đồng tu của mình là nhà sư Nguyễn Minh Không giúp đỡ. Sau này chính sư Nguyễn Minh Không đã chữa trị căn bệnh “hoá hổ” của vua Thần Tông vậy. 
+
+Lý Anh Tông (1138-1175) : năm 1138, vua Lý Thần Tông băng hà, con thứ 2 là thái tử Lý Thiên Tộ kế vị, tức Lý Anh Tông. Vì vua lên ngôi còn nhỏ nên bị Thái úy nhiếp chính Đỗ Anh Vũ nắm hết quyền hành, mẹ ông là bà Lê Thị Lại tư thông với Vũ. Năm 1158 Đỗ Anh Vũ chết, vua Anh Tông lúc này mới trọng các hiền thần như Tô Hiến Thành, Hoàng Nghĩa Hiền, Lý Công Tín. Các hiền thần này đã giúp vua đánh Đông, dẹp Bắc giữ yên bờ cõi và sự thịnh vượng của các đời vua trước. 
+
+Lý Cao Tông (1175-1210) : năm 1175, vua Lý Anh Tông băng hà, con thứ 2 là thái tử Lý Long Cán được sự phò trợ của Phụ chính Tô Hiến Thành lên ngôi kế vị, tức Lý Cao Tông. Vua là người bên trong thì ham thích tửu sắc, ăn chơi, săn bắn bên ngoài thì thích tiền của, xây cung điện. Sau khi Tô Hiến Thành mất, chính sự rối ren, giặc giã nổi dậy khắp nơi, lòng dân oán thán, ngoại xâm rình rập. 
+
+Lý Huệ Tông (1210-1224) : năm 1210 Lý Cao Tông mất, con là thái tử Lý Sảm lên ngôi, tức Lý Huệ Tông. Lý Huệ Tông lên ngôi trong lúc tình hình đất nước rối ren do cha là Cao Tông gây ra. Ông phải dựa vào thế lực họ Trần để giữ vững ngôi vua của mình. Lúc này thế lực họ Trần đang rất lớn mạnh. Trần Thị Dung làm hoàng hậu, anh là Trần Tự Khánh làm Phụ Chính Thái uý, Trần Thừa làm Nội thị phán thủ. Bề ngoài Huệ Tông dùng họ Trần nhưng thật chất bên trong ông đã nhìn thấy được cái họa quyền thần và luôn tìm cách để tiêu diệt. Nhưng do kém tài nên ông đành “lực bất tòng tâm” nhìn quyền thần ngang ngược. Ông uất hận đến độ phát cuồng. 
+
+Lý Chiêu Hoàng (1224-1225) : năm 1223 Trần Tự Khánh chết, quyền hành lại rơi vào tay em họ của Tự Khánh là Trần Thủ Độ. Năm 1224, Trần Thủ Độ ép vua Huệ Tông đi tu để nhường ngôi cho con gái nhỏ là Lý Chiêu Hoàng khi đó mới 7 tuổi. Dưới tài đạo diễn của Trần Thủ Độ, Lý Chiêu Hoàng đã lấy Trần Cảnh là cháu họ của Trần Thủ Độ. Ngày 21 tháng 10 năm Ất Dậu (22/11/1225) Lý Chiêu Hoàng ban chiếu nhường ngôi cho Trần Cảnh. Ngày mồng 1 tháng chạp cùng năm (31/12/1225) Chiêu Hoàng chính thức trút bỏ hoàng bào mời Trần Cảnh lên làm hoàng đế chấm dứt 216 năm với 11 triều vua trị vì của nhà Lý mở ra thời đại của nhà Trần. 
+
+ 
+Nhà Trần (1225 – 1400) 
+
+  
+Trần Thái Tông (1225-1258) : lúc này do nhà Lý suy yếu, quyền hành tập trung trong tay họ Trần. Chính sự đạo diễn của Trần Thủ Độ đã đưa Trần Cảnh lên ngôi hoàng đế mở ra triều đại nhà Trần. Trong lúc tại vị, ông đã lãnh đạo nhân dân chống lại cuộc xâm lược lần thứ 1 của quân Nguyên Mông. 
+
+Trần Thánh Tông (1258-1278) : năm 1258 vua Thái Tông nhường ngôi lại cho con mình là Trần Hoảng, tức Trần Thánh Tông, để trở thành Thái Thượng hoàng. Ông là vị vua nhân hậu, hòa ái. Ông đã cùng với Trần Nhân Tông 2 lần đánh tan quân Nguyên Mông xâm lược trong thời gian làm Thái Thượng hoàng. 
+
+Trần Nhân Tông (1278-1293) : năm 1278 vua Thánh Tông nhường ngôi lại cho con trai là Trần Khâm, tức Trần Nhân Tông, còn mình thì lui về làm Thái Thượng hoàng và nghiên cứu Phật pháp. Ông là vị vua thông minh, quyết đoán. Ông đã cùng với cha mình là Thái thượng hoàng Thánh Tông 2 lần đánh tan giặc Nguyên Mông. Ông cũng từng thân chinh đem quân đi đánh giặc Ai Lao quấy nhiễu. Sau khi nhường ngôi cho con, ông trở thành Thái Thượng hoàng, chú tâm nghiên cứu Phật pháp. Sau đó ông xuất gia tu hành và trở thành tổ sư thứ nhất của thiền phái Trúc Lâm Yên Tử. 
+
+Trần Anh Tông (1293-1314) : năm 1293 sau khi đánh tan được quân xâm lược Nguyên Mông, vua Nhân Tông về làm Thái Thượng Hoàng nhường ngôi cho con mình là Trần Thuyên, tức Trần Anh Tông. Ông cũng là vị vua đức độ, anh minh. Đất nước lúc bấy giờ vua hiền tôi trung nên tiếp tục phát triển thịnh vượng. 
+
+Trần Minh Tông (1314-1329) : năm 1314, vua Anh Tông nhường ngôi hoàng đế lại cho con trai của mình là Trần Mạnh, tức Trần Minh Tông, lui về làm Thái thượng hoàng. Ông tiếp tục truyền thống của các tiên đế, coi trọng kẻ sĩ nên đất nước có nhiều hiền tài giúp sức. 
+
+Trần Hiến Tông (1329-1341) : năm 1329 Trần Minh Tông lui về làm Thái Thượng hoàng, nhường ngôi cho con trai thứ là Trần Vượng, tức Trần Hiến Tông. Ông được xem là vị vua “lấy vì” do thực quyền đều do Thái Thượng hoàng Minh Tông nắm giữ. 
+
+Trần Dụ Tông (1341-1369) : năm 1341, vua Hiến Tông mất mà không có con nối dõi nên Thái Thượng Hoàng Minh Tông đã lập con thứ 10 của mình, em của Hiến Tông là Trần Hạo làm vua, tức Trần Dụ Tông. Do được Thái Thượng Hoàng chăm lo mọi việc từ trong ra ngoài nên vua Dụ Tông chỉ biết ham chơi hưởng lạc. Năm 1357 Thượng hoàng Minh Tông mất, đất nước bắt đầu rói ren, gian thần hoành hành. 
+
+Trần Nghệ Tông (1370-1372) : năm 1369 Dụ Tông mất, do không có con nên vua lập Nhật Lễ làm vua. Nhật Lễ là người dị tộc vốn không mang họ Trần, là con riêng của vợ Trần Nguyên Dục – một người anh của Dụ Tông. Nhật Lễ kém tài, kém đức lại có ý định đổi sang họ tộc của mình là Dương nên khiến quần thần vô cùng bất bình. Trần Phủ là anh của Dụ Tông đã hợp mưu phế thuất Nhật Lễ để lên ngôi hoàng đế, tức Trần Nghệ Tông. Vua cung kính, kiêm ước thì có thừa mà quyết đoán, cương nghị thì không đủ nên nạn bên trong đã được dẹp yên nhưng giặc bên ngoài thì giặc Chiêm Thành hoành hành ngang ngược. 
+
+Trần Duệ Tông (1372-1377) : năm 1372, Nghệ Tông nhường ngôi lại cho em là Trần Kính, tức Duệ Tông, rồi lui về làm Thái Thượng hoàng. Duệ Tông là người có tài nhưng tính tình tự phụ. Trong thời gian này giặc Chiêm Thành vẫn hay xâm lấn,cướp phá ở biên cương. 
+
+Trần Phế Đế (1377-1388) : năm 1377 vua Duệ Tông thân chinh dẫn 12 vạn quân đánh nước Chiêm Thành. Do khinh thường quân địch nên vua đã rơi vào bẫy phục kích mà tử trận. Thái Thượng hoàng Nghệ Tông thương tiếc nên lập Trần Hiện là con vua Duệ Tông làm hoàng đế, tức Trần Phế Đế. Lúc này bên trong thế lực của họ Hồ đang rất lớn mạnh, bên ngoài phía Nam có giặc Chiêm Thành, phía Bắc có giặc nhà Minh. 
+
+Trần Thuận Tông (1388-1398) : vì Phế Đế biết được dã tâm của Hồ Quý Ly nên âm thầm tìm cách trừ khử. Quý Ly biết được bèn xui với Thượng hoàng Nghệ Tông. Nghệ Tông nghe lời phế bỏ Phế Đế rồi đưa con út của mình là Trần Ngung lên ngôi, tức Trần Thuận Tông. Thuận Tông tuổi nhỏ nhu nhược nên mọi quyền hành đều tập trung vào tay Hồ Quý Ly. Sau khi giết được vua Chiêm Thành là Chế Bồng Nga thì mặt trận phía Nam xem như tạm ổn nhưng nội loạn bên trong xem ra ngày càng hỗn loạn. 
+
+Trần Thiếu Đế (1398-1400) : năm 1398 Hồ Quý Ly ép vua Thuận Tông nhường ngôi lại cho con nhỏ mới được 2 tuổi là Trần An, tức Thiếu Đế. Họ Hồ còn ép Thuận Tông đi tu và đã cho người theo để ám sát. Thiếu Đế tuổi còn quá nhỏ nên họ Hồ từ đó tung hoàng trong triều đình. Thiếu Đế ở ngôi được 1 năm thì bị ông ngoại là Hồ Quý Ly cướp ngôi, chấm dứt 175 năm cai trị của nhà Trần. 
+
+ 
+ Nhà Hồ (1400 – 1407) 
+
+  
+Hồ Quý Ly (1400-1401) : năm 1400, Hồ Quý Ly cướp ngôi cháu ngoại của mình là Trần Thiếu Đế, lập nên nhà Hồ đặt tên nước là Đại Ngu. 
+
+Hồ Hán Thương (1401-1407) : năm 1401 Hồ Quý Ly nhường ngôi cho con là Hồ Hán Thương rồi lui về làm Thái Thượng hoàng. Năm 1406 nhà Minh lấy cớ “phò Trần diệt Hồ” đã đem quân sang đánh nước Đại Ngu. Cha con họ Hồ chống không nổi sức địch. Năm 1407 cha con Hồ Quý Ly bị bắt và giết chết. 
+
+ 
+Nhà Hậu Trần (1407 – 1409) 
+
+  
+Giản Định Đế (1407 – 1409) : năm 1407, sau khi quân Minh đã đánh chiếm được nước Đại Ngu của nhà Hồ thì Trần Ngỗ là con trai của vua Nghệ Tông bỏ trốn đến Mô Độ, Trường Yên. Tại đây ông xưng vua, tức Giản Định Đế, và lãnh đạo quân đội đánh chiếm lại đất đai từ tay nhà Minh, khôi phục lại triều đại nhà Trần. 
+
+Trùng Quang Đế (1409 – 1413) : năm 1409 nội bộ nhà Trần dần bị chia rẽ. Một số tướng lĩnh bất mãn đã bỏ đi và đón Trần Quý Khoáng là cháu nội của Nghệ Tông ra Nghệ An làm vua, tức Trùng Quang Đế. Sau đó Trùng Quang Đế sai quân đánh úp Giản Định Đế đem về tôn làm Thái Thượng Hoàng. 
+
+ 
+Thời kỳ Bắc Thuộc lần IV (1413 – 1428) 
+
+ 
+Cuộc chiến giữa nhà Trần và quân Minh xâm lược diễn ra rất ác liệt. Cuối cùng do lực lượng mỏng manh nên đến năm 1413 quân Minh phản kích và đánh bại quân nhà Trần. Vua tôi nhà Trần toàn bộ bị bắt và đã tự vẫn để giữ trọn khí tiết. Nước ta rơi vào tay nhà Minh. 
+
+ 
+Nhà Hậu Lê – Lê sơ (1428 – 1527) 
+
+ 
+Lê Thái Tổ (1428 – 1433) : năm 1428, Lê Lợi tập hợp anh hùng hào kiệt, phất cờ khởi nghĩa, sử gọi là Khởi nghĩa Lam Sơn. Ông cũng tự xưng là Bình Định Vương, kêu gọi nhân dân đứng lên chống giặc Minh cứu nước. Năm 1427, ông đã lãnh đạo quân đội đánh tan 15 vạn quân cứu viện và chém chết Liễu Thăng. Năm 1428 ông lên ngôi hoàng đế, tức Lê Thái Tổ. 
+
+Lê Thái Tông (1433 – 1442) : năm 1433, vua Lê Thái Tổ băng hà, con thứ là thái tử Lê Nguyên Long lên kế ngôi khi được 11 tuổi. Từ nhỏ ông đã tỏ ra là vị vua anh minh sáng suốt, có tài nhìn xa trông rộng, tuy tuổi nhỏ nhưng tự mình cầm quyền chấp chính. Tuy nhiên ông cũng là một vị vua hiếu sắc, đa tình và thảm cảnh là cái chết để lại một nghi án lớn trong lịch sử, đó là vụ án Lệ Chi Viên. 
+
+Lê Nhân Tông (1442 – 1459) : năm 1442, vua Lê Thái Tông băng hà một cách bí ẩn tại Lệ Chi Viên, thái tử Lê Bang Cơ lên ngôi vua, tức Lê Nhân Tông, thái hậu là Nguyễn Thị Anh nhiếp chính. Ông là vị vua nhân từ, bác ái, trọng đãi công thần, hiếu đễ 
+
+Thái hậu, thương yêu anh em. Thân thế của ông vẫn còn là một bí ẩn. Tương truyền rằng, ông không phải là con vua Thái Tông. Trước khi mẹ ông vào cung, thì bà đã có thai với một người tên là Lê Bang Sơn. Đó cũng là lý do khiến ông bị anh mình là Lê Nghi Dân ám sát. 
+
+Lê Thánh Tông (1460 – 1497) : sau khi giết chết vua Nhân Tông, Nghi Dân lên ngôi, làm vua được 8 tháng, tuy nhiên sử sách không công nhận ngôi vua của Nghi Dân. Năm 1460 các công thần trụ cột nổi dậy, lật đổ Nghi Dân và đưa con thứ 4 của vua Thái Tông là Lê Tư Thành lên ngôi hoàng đế, tức Lê Thánh Tông. Ông là một bậc minh quân và là vị vua đã đưa nước Đại Việt phát triển đến thời cực thịnh. Bên trong ông chú trọng giáo dục, trọng dụng hiền tài. Bên ngoài ông chú trọng mở mang bờ cõi. Trong thời kỳ này với việc Tây tiến và Nam tiến của mình, Đại Việt đã mở mang bờ phía Nam xuống tận Quãng Nam. Các nước lân bang như Chiêm Thành, Ai Lao, Chân Lạp, Lan xang, Chiang Mai, Melaka (thuộc Malaysia ngày nay), Java (thuộc Indonesia ngày nay) đều trở thành chư hầu và đều có nghĩa vụ nộp cống cho Đại Việt. Tuy Đại Việt vẫn giữ thói quen xưa là xưng thần với nhà Minh nhưng với thanh thế lững lẫy của mình lúc đó khiến nhà Minh vẫn không dám khinh động mà dùng lễ để đối đãi với Đại Việt. 
+
+Lê Hiến Tông (1497 – 1504) : năm 1947, vua Thánh Tông băng hà, con trưởng là Lê Tranh lên kế vị, tức Lê Hiến Tông. Ông là vị vua thông minh, nhân từ và ôn hòa nên giữ được sự thịnh trị thái bình, thiên hạ bình an. 
+
+Lê Túc Tông (1504) : năm 1504 Lê Hiến Tông bị bệnh nặng băng hà, con là Lê Thuần lên ngôi, tức Lê Túc Tông. Ông là vị vua hiền, hiếu học, thân người hiền nhưng đáng tiếc là chỉ ở ngôi có 6 tháng. 
+
+Lê Uy Mục (1505 – 1509) : cuối năm 1504, vua Lê Túc Tông băng hà. Theo ký thác của vua Túc Tông anh của ông là Lê Tuấn lên kế vị, tức Lê Uy Mục. Uy Mục là một hôn quân ăn chơi sa đọa, ham mê tửu sắc, tàn bạo giết hại nhiều trung thần khiến quần thần phẩn nộ. 
+
+Lê Tương Dực (1509 – 1516) : năm 1509 Giản Tu công Lê Oanh là cháu nội vua Thánh Tông, con của Kiến Vương Lê Tân nổi dậy đem quân đánh Đông Kinh (Hà Nội), bắt giết Lê Uy Mục. Sau đó Oanh lên ngôi vua, tức Lê Tương Dực. Vua ban đầu còn chăm lo việc nước, sau ăn chơi vô độ làm triều đình rối ren, phản loạn khắp nơi. 
+
+Lê Chiêu Tông (1516 – 1522) : năm 1516 Trịnh Duy Sản đã giết chết vua Tương Dực, lập con người anh của Tương Dực là Lê Y lên làm vua, tức Lê Chiêu Tông. Lúc này quyền thần họ Trần, Trịnh, Mạc lộng hành, nổi loạn khắp nơi. 
+
+Lê Cung Hoàng (1552 – 1527) : năm 1522 trước loạn quyền thần Mạc Đăng Dung, vua Chiêu Tông phải trốn đi. Dung liền lập em của Chiêu Tông là Lê Xuân lên ngôi, tức Lê Cung Hoàng. Vua Cung Hoàng chỉ là vị vua bù nhìn được Mạc Đăng Dung dựng lên để được chính danh. Năm 1526 Mạc Đăng Dung giết được Chiêu Tông, nửa năm sau họ Mạc ép Cung Hoàng nhường ngôi và bất tử chết. Từ đây nhà Lê chỉ còn tồn tại trên danh nghĩa, không còn thực quyền. Đất nước bị chia cắt thành Nam-Bắc triều. 
+
+ 
+Nhà Hậu Lê – Lê Trung Hưng (1527 – 1592) / Nam – Bắc triều 
+
+ 
+Năm 1527 Mạc Đăng Dung cướp ngôi nhà Lê, thành lập nhà Mạc (Bắc triều). Năm 1533, Nguyễn Kim không phục nhà Mạc nên đã bỏ vào Thanh Hoá, đón Lê Duy Ninh về lập làm hoàng đế, tức Lê Trang Tông (Nam Triều). Cuộc chiến của Nam-Bắc triều kéo dài đến năm 1592 thì Trịnh Tùng đã chiếm được Thăng Long, kết thúc thời kỳ Nam – Bắc triều. 
+
+ 
+Bắc triều 
+
+  
+Mạc Đăng Dung (1527 – 1529) : sau khi cướp ngôi của Cung Hoàng, Mạc Đăng Dung tự xưng hoàng đế, tức Mạc Thái Tổ. Chiếm đóng ở phía Bắc nên sử gọi là Bắc Triều. 
+
+Mạc Đăng Doanh (1529 – 1540) : năm 1529 Mạc Đăng Dung nhường ngôi cho con trưởng là Mạc Đăng Doanh, tức Mạc Thái Tông, để lên làm Thái Thượng hoàng. Đăng Doanh được coi là vị vua có tài văn trị. Trong thời gian ông cai trị miền Bắc dân chúng ấm no, ngoại xâm phương Bắc cũng không dám lấn sang. 
+
+Mạc Phúc Hải (1540 – 1546) : năm 1540, Mạc Đăng Doanh mất, Mạc Đăng Dung lập cháu nội của mình là Mạc Phúc Hải nối ngôi, tức Mạc Hiến Tông. 
+
+Mạc Phúc Nguyên (1546 – 1561) : năm 1546 Mạc Phúc Hải lâm bệnh mất, con là Mạc Phúc Nguyên lên thay, tức Mạc Tuyên Tông. 
+
+Mạc Mậu Hợp (1560 – 1592) : năm1561 Mạc Phúc Nguyên bị bệnh đậu mùa mất, con nhỏ là Mạc Mậu Hợp lên thay. phụ chính là Khiêm Vương Mạc Kính Điển. Trong thời gian này chiến sự rất ác liệt giữa Bắc Triều và Nam Triều. 
+
+Mạc Toàn (1592 – 1593) : năm 1592 trước thế tiến công như vũ bão của Nam Triều, Mạc Mậu Hợp nhường ngôi cho con là Mạc Toàn, còn mình thì thân chinh ra trận. Nhưng uy thế Nam Triều rất mạnh nên cũng chỉ đến năm 1593 quân Lê – Trịnh đã bắt và giết được Mạc Toàn kết thúc thời kỳ Nam – Bắc triều mở ra thời kỳ phân liệt khác (Đàng Ngoài – Đàng Trong) cũng như hy hữu nhất của Đại Việt (vua Lê – chúa Trịnh). Một số tàn dư nhà Mạc rút lên Cao Bằng vẫn chống đối với triều Lê – Trịnh cho đến khi bị tiêu diệt hết vào năm 1677). 
+
+ 
+Nam triều 
+
+  
+Lê Trang Tông (1533 – 1548) : năm 1533 cựu thần nhà Hậu Lê là Nguyễn Kim không phục nhà Mạc nên đã vào Thanh Hóa thành lập lực lượng rồi đón Lê Duy Ninh về lập làm hoàng đế, tức Lê Trang Tông, phục hưng nhà Lê. Sử sách ghi Trang Tông là con vua Chiêu Tông (?) nhưng cũng có luồn tư tưởng khác nói Trang Tông là con riêng của Nguyễn Kim (?). Vua Trang Tông còn được dân gian gọi là chúa Chổm. 
+
+Lê Trung Tông (1548 – 1556) : năm 1548 vua Trang Tông mất, con là Lê Duy Huyên lên nối ngôi, tức Lê Trung Tông. 
+
+Lê Anh Tông (1556 – 1573) : năm 1556, vua Trung Tông mất mà không có con nối dõi nên phụ chính Trịnh Kiểm chọn Lê Duy Bang lên ngôi, tức Lê Anh Tông. Lúc này quyền lực nhà họ Trịnh đang rất lớn, vua Anh Tông đã nhìn thấy được cái họa của quyền thần nên âm thầm loại bỏ nhưng kế hoạch không thành. 
+
+Lê Thế Tông (1573 – 1599) : khi kế hoạch loại bỏ quyền lực của nhà họ Trịnh bị thất bại vua Lê Anh Tông phải bỏ trốn và sau đó bị sát hại. Trịnh Tùng đưa người con nhỏ của Anh Tông là Lê Duy Đàm lên ngôi, tức Lê Thế Tông. Lúc này Trịnh Tùng đã đánh bại được nhà họ Mạc (Bắc triều) nên quyền lực thực sự nằm trong tay họ Trịnh, vua chỉ là bù nhìn bắt đầu thời kỳ vua Lê – chúa Trịnh hy hữu trong lịch sử Việt Nam và cũng mở đầu thời kỳ đất nước bị phân liệt một cách sâu sắc nhất thành Đàng Ngoài và Đàng Trong. 
+
+ 
+Nhà Hậu Lê – Lê Trung Hưng (1593 – 1778) / Đàng ngoài – Đàng trong 
+
+ 
+Năm 1545, sau khi Nguyễn Kim bị đầu độc chết, quyền lực rơi vào tay con rể là Trịnh Kiểm. Để giữ vững binh quyền của mình Trịnh Kiểm đã ra tay loại bỏ anh em vợ. Em vợ của Trịnh Kiểm là Nguyễn Hoàng sợ bị sát hại nên đã xin vào Nam trấn thủ Thuận Hóa (từ Quãng Trị đến Thừa Thiên-Huế ngày nay). Năm 1592, sau khi Trịnh Tùng là con của Trịnh Kiểm lật đổ được nhà Mạc, quyền hành tập trung trong tay nhà họ Trịnh. Lúc này Trịnh Tùng mới bắt đầu “nghĩ” đến người cậu trong Nam là Nguyễn Hoàng. Năm 1627, Trịnh Tráng đem quân vào Nam đánh Nguyễn Phúc Nguyên chính thức mở đầu cho cuộc nội chiến Trịnh Nguyễn. Sau thời gian dài giằng co, đến năm 1672 hai bên tạm thời ngừng chiếm và lấy sông Gianh làm giới tuyến. Trên danh nghĩa vua Lê vẫn là người đứng đầu đất nước. 
+
+ 
+Lê Trung Hưng 
+
+  
+Lê Kính Tông (1599 – 1619) : năm 1599 Lê Thế Tông mất, con thứ là Lê Duy Tân lên thay, tức Lê Kính Tông. 
+
+Lê Thần Tông (1619 – 1643 và 1649 – 1662) : năm 1619, vua Kính Tông hợp mưu cùng Trịnh Xuân là con của Trịnh Tùng giết chết Trịnh Tùng để giành lại quyền lực. Kế hoạch không thành, vua bị ép thắt cổ chết. Con trưởng là Lê Duy Kỳ lên ngôi, tức Lê Thần Tông. Ông là vị vua đặc biệt trong lịch sử Việt Nam vì làm vua đến 2 lần và giống như vua Trần Minh Tông, vua Lê Thần Tông có 4 người con đều làm vua. Năm 1643 ông nhường ngôi cho con trưởng là Lê Duy Hựu, tức Lê Chân Tông, còn ông làm Thái Thượng Hoàng. Năm 1649 Lê Chân Tông mất, ông lại trở về làm vua đến 1662 thì mất. 
+
+Lê Chân Tông (1643 – 1649) : năm 1643, vua Thần Tông nhường ngôi cho con là Lê Duy Hựu, tức Lê Chân Tông. 
+
+Lê Huyền Tông (1663 – 1671) : năm 1662 vua Thần Tông yểu mệnh qua đời, con là Lê Duy Vũ lên nối ngôi, tức Lê Huyền Tông. 
+
+Lê Gia Tông (1672 – 1675) : năm 1671 vua Huyền Tông yểu mệnh qua đời lúc 18 tuổi nhưng không có con nối ngôi nên người em của vua Huyền Tông là Lê Duy Cối lên thay, tức Lê Gia Tông. 
+
+Lê Hy Tông (1675 – 1705) : năm 1675 vua Gia Tông yểu mệnh qua đời lúc 15 tuổi. Vì vua không có con nối dõi nên Trịnh Tạc bèn lập em vua là Lê Duy Hiệp lên ngôi, tức Lê Hy Tông. 
+
+Lê Dụ Tông (1705 – 1729) : năm 1705 vua Hy Tông nhường ngôi cho con là thái tử Lê Duy Đường, tức Lê Dụ Tông, còn mình lên làm Thái Thượng hoàng. 
+
+Lê Duy Phường (1729 – 1732) : năm 1729 vua Dụ Tông bị Trịnh Cương ép nhường ngôi cho con là Thái tử Lê Duy Phường. 
+
+Lê Thuần Tông (1732 – 1735) : năm 1732 Trịnh Giang phế bỏ Lê Duy Phường xuống làm Hôn Đức Công, lập anh của Duy Phường là Lê Duy Tường lên ngôi, tức Lê Thuần Tông. 
+
+Lê Ý Tông (1735 – 1740) : năm 1735 Lê Thuần Tông mất, Trịnh Giang lại lập em của Thuần Tông là Lê Duy Thận lên ngôi, tức Lê Ý Tông. 
+
+Lê Hiển Tông (1740 – 1786) : năm 1740 Trịnh Doanh ép vua Ý Tông nhường ngôi cho con trưởng của vua Thuần Tông là Lê Duy Diêu, tức Lê Hiển Tông. 
+
+Lê Mẫn Đế (1787 – 1788) : năm 1786 Nguyễn Huệ đem quân ra Bắc đánh đổ Trịnh Khải, lúc này thực quyền nằm trong tay Nguyễn Huệ. Năm 1787 vua Hiển Tông mất, Nguyễn Huệ với sự góp ý của vợ là Ngọc Hân công chúa đã lập Lê Duy Kỳ lên làm vua, tức Lê Mẫn Đế hay Lê Chiêu Thống. Đây cũng là vị vua cuối cùng của nhà Lê và cũng là vị vua bị chỉ trích rất dữ dội vì đã từng qua cầu viện quân nhà Thanh về đánh quân Tây Sơn của Nguyễn Huệ. Hành vi này bị xem là “cõng rắn cắn gà nhà” của Chiêu Thống. 
+
+ 
+Các chúa Trịnh ở Đàng ngoài 
+
+  
+Bình An Vương – Trịnh Tùng (1623 – 1652) : Trịnh Tùng là con thứ của Trịnh Kiểm, là người có công đánh đổ nhà Mạc, lấy lại chính quyền cho nhà Lê. Ông được coi là vị chúa Trịnh đầu tiên trong lịch sử Việt Nam. Ông cũng là người kết thúc cho thời kỳ Nam-Bắc triều và mở ra thời kỳ Trịnh-Nguyễn phân tranh. 
+
+Thanh Đô Vương – Trịnh Tráng (1623 – 1652) : năm 1623 Trịnh Tùng lâm bệnh nặng và mất, con là Trịnh Tráng lên thay. Ông đã 4 lần phát quân đánh với chúa Nguyễn ở Đàng Trong nhưng chỉ toàn thất bại nên phải rút về. 
+
+Tây Đô Vương – Trịnh Tạc (1653 – 1682) : năm 1653, Trịnh Tráng phong Trịnh Tạc làm Tây Đô Vương. Năm 1657, chúa Nguyễn đem quân vượt sông Gianh đánh Bắc Bố Chính và chiếm được 7 huyện Nam Hà. Trong lúc chiến sự gay go thì Trịnh Tráng mất, con là Trịnh Tạc lên thay. Ông cùng với con trai là Trịnh Căn, phản công với quân của chúa Nguyễn giành lại được Bắc Hà vào năm 1660. 
+
+Định Vương – Trịnh Căn (1682 – 1709) : năm 1682 Trịnh Tạc mất, con là Trịnh Căn lên thay. Ông là người có tài cả về quân sự lẫn văn trị. Ông từng cầm quân giành lại đất Bắc Hà từ tay chúa Nguyễn. Ông cũng là người khôn khéo trong ngoại giao khi buộc nhà Thanh phải trả lại các vùng đất bị quan trấn thủ nhà Thanh chiếm ở vùng biên giới. Thời gian ông cầm quyền có thể nói là thời kỳ thịnh vượng nhất ở Đàng Ngoài. 
+
+An Đô Vương – Trịnh Cương (1709 – 1729) : năm 1709 Trịnh Căn qua đời, vì con và cháu nội đích truyền đều đã mất, nên chắc là Trịnh Cương lên thay. Ông kế vị trong hoàn cảnh đất nước thái bình, thịnh trị, không có nạn đao binh. Ông sớm tỏ ra là người chín chắn, tận tụy khi tiếp quản cơ nghiệp của tổ tiên và củng cố thêm nền cai trị ở Đàng Ngoài. 
+
+Uy Nam Vương – Trịnh Giang (1729 – 1740) : năm 1740 Trịnh Cương đột ngột qua đời, con là thái tử Trịnh Giang lên thay. Giang là người ương hèn, lại ham mê hưởng lạc khiến cho quần thần bất mãn, giặc giã nổi loạn khắp nơi, nền chính trị ở Bắc Hà lung lay dữ dội. Có lần Trịnh Giang bị sét đánh gần chết. Từ đó mắc bệnh “kinh quý”, tâm thần hoảng loạn, phải cho xây cung Thưởng Trì xuống lòng đất để ở. 
+
+Minh Đô Vương – Trịnh Doanh (1740 – 1767) : năm 1740, các quần thần trong triều hợp sức đồng lòng lập Trịnh Doanh là em của Trịnh Gianh lên làm chúa, tức Minh Đô Vương. Doanh từ nhỏ đã sớm biểu hiện là người văn tài võ lược. Khi lên ngai vương, ông đã lập tức sửa sang lại những gì mà Trịnh Giang đã làm sai như phế bỏ vua Lê Duy Phường, lập vua Lê Duy Tường, đánh dẹp các cuộc khởi nghĩa nông dân ở Đàng Ngoài. 
+
+Tĩnh Đô Vương – Trịnh Sâm (1767 – 1782) : năm 1767, Trịnh Doanh mất, con là thái tử Trịnh Sâm lên thay. Từ nhỏ Sâm đã được nuôi dạy rất cẩn thận nên khi trưởng thành là người văn võ toàn tài, tính tình cứng rắn, thông minh và quyết đoán. Ông cũng là vị chúa đầu tiên và duy nhất ở Đàng Ngoài đánh chiếm được vùng Thuận Hóa của chúa Nguyễn ở Đàng Trong. Nhưng sau khi thắng trận lại tỏ ra kiêu căng tự phụ. 
+
+Điện Đô Vương – Trịnh Cán (2 tháng trong năm 1782) : năm 1767, Trịnh Sâm mất, con là Trịnh Cán còn nhỏ lại hay đau bệnh lên thay. 
+
+Đoan Nam Vương – Trịnh Khải (1782 – 1786) : sau khi Trịnh Sâm mất, Trịnh Khải là con trai trưởng muốn cướp ngôi nên đã xúi giục bọn kiêu binh ở Tam phủ nổi loạn, phế Cán lập Khải lên ngôi. Lúc này Bắc Hà rơi vào nạn kiêu binh nổi loạn, cướp phá khắp nơi. 
+
+Án Đô Vương – Trịnh Bồng (1787 – 1788) : năm 1786, nghĩa quân Tây Sơn do Nguyễn Huệ lãnh đạo tiến đánh Bắc Hà. Quân Trịnh Khải chống cự yếu ớt và bị đánh tan tác. Bản thân Trịnh Khải bị bắt và tự tử ngay sau đó. Để cứu cơ nghiệp của nhà Trịnh, Trịnh Bồng là bác họ của Trịnh Khải tập hợp các tướng lĩnh cũ để mưu đồ việc lớn. Nhưng sau nhiều lần thất bại ông đã từ bỏ ngai vương, chọn cuộc sống tu hành rồi trốn đời biệt tích. Ông là vị Trịnh vương cuối cùng trong lịch sử Việt Nam. 
+
+ 
+Các chúa Nguyễn ở Đàng trong 
+
+  
+Sãi vương – Nguyễn Phúc Nguyên (1613 – 1635) : ông là con thứ 6 của Chúa Tiên Nguyễn Hoàng – người có công khai phá mở mang bờ cõi ở phương Nam. Ông là người có tài về quân sự, chính trị và ngoại giao. Trong thời gian cai trị ông đã cố gắng xây dựng xứ Đàng Trong độc lập, tự chủ, hoàn toàn ly khai với Đàng Ngoài. Ông cũng là người 2 lần đánh bại cuộc tiến công của chúa Trịnh ở Đàng Ngoài. Ông cũng được dân gian gọi là chúa Sãi (Sãi vương), hay chúa Bụt (Phật vương). 
+
+Thượng vương – Nguyễn Phúc Lan (1635 – 1648) : năm 1635 Sãi vương qua đời, con thứ 2 là Nguyễn Phúc Lan lên thay. Ông cũng được gọi là chúa Thượng (Thượng vương). 
+
+Hiền vương – Nguyễn Phúc Tần (1648 – 1687) : năm 1648, Thượng vương đột ngột qua đời trong khi có chiến sự với Đàng Ngoài. Nguyễn Phúc Tần là con lên thay. Ông là vị chúa đầu tiên và duy nhất ở ĐàngTrong chủ động cho quân vượt sông Gianh đánh Đàng Ngoài và chiếm được Nam Hà. Sau thời gian giằng co với quân Trịnh, năm 1672 hai bên chính thức đình chiến, lấy sông Gianh làm biên giới. Về đối nội ông là người chăm lo chính sự, xa rời nữ sắc và coi trọng hiền tài nên ông được dân gian gọi là chúa Hiền (Hiền vương). 
+
+Nghĩa vương – Nguyễn Phúc Thái (1687 – 1691) : năm 1687 Hiền vương qua đời, con là Nguyễn Phúc Thái lên thay. Phúc Thái nổi tiếng là người nhân nghĩa, rộng lượng, là vị chúa có tài. Ông trọng dụng hiền tài, giảm nhẹ hình phạt, thuế khóa khiến trăm họ đều vui nên dân gian gọi ông là chúa Nghĩa (Nghĩa vương). 
+
+Minh vương – Nguyễn Phúc Chu (1691 – 1725) :năm 1691, Nghĩa vương qua đời, con là Nguyễn Phúc Chu lên thay. Ông là một vị chúa có hiền và có tài nên dân gian gọi là chúa Minh (Minh vương hay Quốc chúa Minh vương). Nối nghiệp tiền nhân, ông mở mang bờ cõi xuống phía Nam đến tận Hà Tiên. Ông cũng là người rất coi trọng hiền thần, thích lời ngay thẳng, bỏ xa hoa, giảm nhẹ thuế má, ngục hình. 
+
+Ninh vương – Nguyễn Phúc Thụ (1725 – 1738) : năm 1725 Nghĩa vương qua đời, con trưởng là Nguyễn Phúc Thụ tiếp ngôi. Thụ từ nhỏ đã là người văn võ toàn tài. Ông đã có công đánh đuổi quân Chân Lạp quấy nhiễu và lấy được đất ở Vĩnh Long và Mỹ Tho. Ông đặt ra các đơn vị hành chánh để quản lý, giữ gìn và mở mang vùng đồng bằng sông Cửu Long. Ông được dân gian gọi là chúa Ninh (Ninh vương). 
+
+Võ vương – Nguyễn Phúc Khoát (1738 – 1765) : năm 1738, Ninh vương qua đời, con trưởng là Nguyễn Phúc Khoát lên thay. Ông là người thông minh, cương nghị, dứt khoát đôi khi tàn nhẫn. Ông là người có công rất lớn trong công cuộc Nam tiến và lấy được rất nhiều vùng đất đai màu mỡ như : Tân An, Gò Công, Sóc Trăng, Trà Vinh, Châu Đốc, Sa Đét. Dân gian thường gọi ông là chúa Võ (Võ vương). 
+
+Định vương – Nguyễn Phúc Thuần (1765 – 1777) : năm 1765, Võ vương qua đời, quyền thần Trương Phúc Loan nắm hết quyền hành. Phúc Loan phế ngôi của củaNguyễn Phúc Luân và đưa Nguyễn Phúc Thuần lúc đó còn nhỏ lên thay. Lúc này khởi nghĩa Tây Sơn nổi dậy cùng với chúa Trịnh ở Đàng Ngoài đánh chiếm Thuận Hóa và tiến về Nam Bộ. Năm 1777, Phúc Thuần bị quân Tây Sơn bắt và giết chết ở Long Xuyên. Ông là vị chúa cuối cùng của nhà Nguyễn ở Đàng Trong trong thời kỳ Trịnh-Nguyễn phân tranh này. Dân gian gọi ông là chúa Định (Định vương). 
+
+ 
+Nhà Tây Sơn 
+
+ 
+Năm 1771 anh em nhà Tây Sơn phất cờ khởi nghĩa ở Đàng Trong đến năm 1778 thì dành được chiến thắng. 
+
+  
+Thái Đức (1778 – 1788) : năm 1771, Nguyễn Nhạc cùng 2 người em của mình là Nguyễn Huệ và Nguyễn Lữ khởi nghĩa ở ấp Tây Sơn. Đến năm 1788 khởi nghĩa thắng lợi, Nguyễn Nhạc tự xưng là Thái Đức Hoàng Đế lập ra nhà Tây Sơn. 
+
+Quang Trung (1788 – 1792) : tình hình trong thời kỳ này rất rối ren phức tạp. Hậu duệ của chúa Nguyễn là Nguyễn Phúc Ánh – con của Nguyễn Phúc Luân, vẫn còn muốn lấy lại cơ nghiệp của các chúa Nguyễn nên sau khi chạy thoát đã cầu viện vua Xiêm mang quân sang đánh với nhà Tây Sơn năm 1784. Đầu năm 1785, Nguyễn Huệ đã cho phục binh ở Rạch Gầm – Xoài Mút đánh tan liên minh Xiêm – Nguyễn. Năm 1786 khi chưa được lệnh anh là Nguyễn Nhạc, Nguyễn Huệ đã tự ý đem quân đánh Bắc Hà lật đỗ họ Trịnh ở Đàng Ngoài. Lúc này nảy sinh mâu thuẫn giữa anh em nhà Tây Sơn. Năm 1788, Lê Chiêu Thống đã “cõng rắn cắn gà nhà” chạy sang cầu viện quân Thanh đêm 29 vạn quân về chiếm Thăng Long. Trong tình cảnh này Nguyễn Huệ buộc phải lên ngôi Hoàng đế, tức Quang Trung Hoàng đế. Sau đó với tài năng quân sự kiệt xuất của mình Quang Trung đã chỉ huy quân Tây Sơn đánh tan 29 vạn quân Thanh xâm lược. Nguyễn Nhạc lúc này xưng là Tây Sơn vương. 
+
+Cảnh Thịnh (1793 – 1802) : năm 1792, Quang Trung hoàng đế đột ngột băng hà bỏ lại nhiều hoài bão chưa hoàn thành, con thứ là Nguyễn Quang Toản lên ngôi, tức Cảnh Thịnh. Lúc này nội bộ trong triều rối ren, họa ngoại thích luôn rình rập. Năm 1793, Nguyễn Ánh đem quân đánh Quy Nhơn, Nguyễn Nhạc cầu viện Cảnh Thịnh. Cảnh Thịnh đem quân đánh Nguyễn Ánh và chiếm luôn Quy Nhơn khiến Nguyễn Nhạc uất hận mà qua đời. Năm 1802, Quang Toản bị Nguyễn Ánh đánh bại, bị bắt và dùng cực hình xử tử, kết thúc triều đại Tây Sơn oanh liệt. Cũng từ đây đất nước lại thống nhất về một mối và mở ra triều đại mới, triều đại phong kiến cuối cùng trong lịch sử Việt Nam – nhà Nguyễn. 
+
+ 
+Nhà Nguyễn – Thời kỳ độc lập tự chủ (1802 – 1883) 
+
+  
+Gia Long (1802 – 1820) : năm 1777 Nguyễn Ánh là hậu duệ của chúa Nguyễn ở Đàng Trong đã chạy thoát trước sự truy sát của quân Tây Sơn. Ông sông lưu vong ở Xiêm La một thời gian. Dưới sự giúp đỡ của Xiêm La và Pháp, năm 1802 Nguyễn Ánh tập trung lực lượng đánh chiếm Nam Hà, sau đó đánh bại nhà Tây Sơn lập nên triều Nguyễn thống nhất giang san rộng lớn từ Nam chí Bắc. Ông lên ngôi hoàng đế, tức Gia Long, đặt tên nước là Việt Nam. Có nhiều luồng nhận xét trái chiều về con người Nguyễn Ánh – Gia Long nhưng khách quan mà nhận xét ông là người rất có nghị lực và có công thống nhất đất nước sau 3 thế kỷ bị chia cắt. Tuy ông đã từng dựa vào ngoại bang như Xiêm La, Pháp nhưng ông là người ý thức tự chủ dân tộc rất cao. Tuy nhiên ông cũng là người tàn nhẫn khi cho phá nát mộ phần của nhà Tây Sơn và giết chết công thần khai quốc vì những chuyện cỏn con. 
+
+Minh Mạng (1820 – 1840) : năm 1820, vua Gia Long bệnh nặng qua đời, con là Nguyễn Phúc Đảm lên thay, tức Minh Mạng. Ông là vị vua thông minh, quyết đoán. Dưới thời của ông, đất nước trở nên thịnh vượng và hùng mạnh có lãnh thổ rộng lớn nhất trong lịch sử Việt Nam. Ông cũng có tham vọng biến nước Việt Nam thành một cường quốc nên đã đặt tên nước là Đại Nam. 
+
+Thiệu Trị (1841 – 1847) : cuối năm 1820, vua Minh Mạng băng hà, con trưởng là Nguyễn Phúc Miên Tông lên thay, tức Thiệu Trị. Ông là người cần mẫn chăm lo việc nước nhưng không năng động nên chỉ áp dụng những gì đã có thời Minh Mạng mà không có cải cách nào đáng chú ý. 
+
+Tự Đức (1847 – 1883) : năm 1847, vua Thiệu Trị băng hà, con thứ là Nguyễn Phúc Hồng Nhậm lên ngôi. Ông là vị vua tốt, cần mẫn nhưng cũng giống các vị tiên đế khác, ông là người theo trường phái Tống nho lạc hậu, bảo thủ và hủ lậu so với đương thời. Thời gian ông trị vì đất nước có nhiều biến cố. Năm 1858, Pháp đem chiến thuyền đến Đà Nẵng bán phá. Năm 1862, Pháp đánh chiếm 3 tỉnh miền Đông Nam Bộ là Biên Hòa, Gia Định và Định Tường. Năm 1867, Pháp đánh chiếm nốt 3 tỉnh miền Tây Nam Bộ là : Vĩnh Long, An Giang và Hà Tiên. Năm 1873, Pháp đánh chiếm 4 tỉnh miền Bắc là : Hà Nội, Nam Định, Ninh Bình và Hải Dương. Năm 1874, ký hòa ước công nhận toàn bộ Nam Kỳ là thuộc Pháp. Năm 1883, ký hiệp ước với Pháp với nội dung là xác nhận toàn bộ quyền bảo hộ dài hạn của Pháp ở Bắc và Trung Kỳ. Đất nước ta lại rơi vào tay ngoại xâm. 
+
+ 
+Nhà Nguyễn – Thời kỳ Pháp thuộc (1883 – 1945) 
+
+  
+Dục Đức (3 ngày, 1883) : năm 1883, vua Tự Đức mất vì vua không có con nối dỗi nên đã nhận 3 người cháu làm con nuôi. Thái tử Nguyễn Phúc Ưng Chân lên thay nhưng chỉ sau 3 ngày đã bị phế truất. 
+
+Hiệp Hòa (6 tháng, 1883) : sau khi phế Dục Đức, 2 quan phụ chính là Tôn Thất Thuyết và Nguyễn Văn Tường đã cho đón con thứ của vua Tự Đức là Nguyễn Phúc Hồng Dật lên ngôi, tức Hiệp Hòa. Nhưng do lập trường của Hiệp Hòa và 2 quan phụ chính trái ngược nhau nên vua chỉ ở ngôi được 6 tháng thì bị phế. 
+
+Kiến Phúc (1883 – 1884) : sau khi phế Hiệp Hòa, người con thứ 3 của vua Tự Đức là Nguyễn Phúc Ưng Đăng lên ngôi, tức Kiến Phúc. Sau 8 tháng ở ngôi vua, Kiến Phúc đã lâm bệnh nặng và mất khi mới 15 tuổi. 
+
+Hàm Nghi (1884 – 1885) : sau khi vua Kiến Phúc mất, 2 quan phụ chính lại đưa em của Kiến Phúc là Nguyễn Phúc Ưng Lịch lên ngôi lúc 13 tuổi, tức Hàm Nghi. Ông tuy nhỏ tuổi nhưng đã nhận thức rất sâu sắc về nỗi đau đất nước. Khi bi Pháp vay hãm, ông đã 2 lần ra chiếu Cần Vương. Ông là tấm gương sáng cho dân tộc. 
+
+Đồng Khánh (1885 – 1888) : năm 1885, vua Hàm Nghi thoát ly triều đình, kéo cờ khởi nghĩa, ra chiếu Cần Vương, tập hợp lực lượng để chống Pháp. Thống tướng người Pháp De Courcy xin ý kiến của Hoàng Thái Hậu Từ Dũ để lập người con nuôi khác của vua Tự Đức là Nguyễn Phúc Ưng Kỷ lên ngôi, tức Đồng Khánh. 
+
+Thành Thái (1889 – 1907) : năm 1889, vua Đồng Khánh bị bệnh qua đời, Tổng sứ Trung Bắc Kỳ chọn Nguyễn Phúc Bửu Lân là con vua Dục Đức lên nối ngôi, tức Thành Thái. Ông là người có suy nghĩ tiến bộ, thời đại lại là người có ý thức dân tộc rất cao nên không được lòng người Pháp. 
+
+Duy Tân (1907 – 1916) : năm 1907, chính phủ Pháp nhận thấy vua Thành Thái là người có ý thức dân tộc cao nên đã cho tung tin vua bị bệnh “thần kinh” và đưa đi lưu đày. Con nhỏ của vua Thành Thái là Nguyễn Phúc Vĩnh San được đưa lên ngôi khi 8 tuổi, tức Duy Tân. Càng lớn, cũng giống như cha mình, vua ý thức được vận mệnh của đất nước, của dân tộc. Vua đã từng dự định cùng khởi nghĩa với Việt Nam Quang Phục Hội của Trần Cao Vân nhưng sự việc chưa tiến hành thì đã bị lộ. 
+
+Khải Định (1916 – 1925) : năm 1916, Pháp buộc tội vua Duy Tân và đưa đi lưu đày. Người Pháp đã chọn Nguyễn Phúc Bửu Đảo là con trưởng vua Đồng Khánh lên ngôi, tức Khải Định. Khải Định là người ương hèn, nhu nhược, chỉ lo ăn chơi, lại luôn nịnh bợ người Pháp nên rất được lòng nhà cầm quyền Pháp bấy giờ. 
+
+Bảo Đại (1926 – 1945) : năm 1925, Khải Định mất. Năm 1926 Bảo Đại lên ngôi vua. Năm 1945, sau khi cách mạng tháng 8 thành công, Bảo Đại chính thức thoái vị, trao ấn tín và kiếm bạc nạm ngọc cho Việt Nam Dân Chủ Cộng Hòa, chính thức trở thành “công dân Vĩnh Thụy”. Ông là vị hoàng đế cuối cùng của triều đại phong kiến trong lịch sử Việt Nam. 
+
+ 
+Thời kỳ đổi mới ( 1945 – nay) 
+
+  
+Việt Nam Dân Chủ Cộng Hòa (1945 – 1976) : năm 1945 dưới sự lãnh đạo của Nguyễn Ái Quốc, quân dân ta đã đánh đổ đế quốc Pháp và phát-xít Nhật. Vào ngày 2/9/1945, Chủ tịch Hồ Chí Minh đã đọc bản tuyên ngôn độc lập tại quãng trường Ba Đình, khai sinh ra nước Việt Nam Dân Chủ Cộng Hòa với thủ đô là Hà Nội. 
+
+Cộng Hòa Xã Hội Chủ Nghĩa Việt Nam (1976 – nay) : năm 1954, VNDCCH đã đánh tan ý chí xâm lược lần 2 của thực dân Pháp bằng chiến thắng Điện Biên Phủ vang dội khắp 5 châu, buộc Pháp phải ngồi vào bàn ký hiệp định Geneve công nhận độc lập chủ quyền và rút quân ra khởi Đông Dương. Cũng trong năm này Mỹ đã thay chân Pháp nhảy vào miền Nam, thành lập chính phủ bù nhìn Việt Nam Cộng Hòa. Sau khi tiến hành nhiều cuộc chiến tranh mà không dành được thắng lợi đến năm 1973 Mỹ buộc phải ngồi vào bàn ký hiệp định Paris. Hiệp định này có ý nghĩa để Mỹ rút chân ra khỏi miền Nam Việt Nam trong danh dự. Năm 1975, quân giải phóng miền Nam đã tiến hành tổng tiến công và nổi dậy vào Sài Gòn, đánh đổ chính quyền VNCH, thống nhất đất nước. Năm 1976, tên nước chính thức là Cộng Hòa Xã Hội Chủ Nghĩa Việt Nam, Đảng Lao Động Việt Nam được đổi thành Đảng Cộng Sản Việt Nam, thủ đô là Hà Nội, Sài Gòn được đổi tên thành Thành phố Hồ Chí Minh. 
+      </pre>
+    </div>
+
+
+    <div class="main-contain-directional">
+      <!--search-->
+      <div class="main-contain-directional-search">
+        <label for="timkiem">
+          <p for="timkiem"><i class="fas fa-search"></i>Tìm kiếm</p>
+        </label>
+        <input type="text" name="" id="timkiem" placeholder="Tìm kiếm...">
+      </div>
+      <!--select thời đại-->
+      <div class="main-contain-directional-thoidai">
+        <div class="main-contain-direction-thoidai-title">
+          <i class="fab fa-fort-awesome-alt"></i> Lựa chọn thời đại
+        </div>
+        <select name="" id="">
+          <option value=""> Hồng Bàng & Văn Lang</option>
+          <option value=""> Âu Lạc & Nam Việt</option>
+          <option value="">Bắc Thuộc Lần I</option>
+          <option value="">Trưng Nữ Vương</option>
+          <option value="">Bắc Thuộc Lần II</option>
+          <option value="">Nhà Lý & Nhà Triệu</option>
+          <option value="">Bắc Thuộc Lần III</option>
+          <option value="">Thời Kỳ Xây Dựng Nền Tự Chủ</option>
+          <option value="">Nhà Ngô</option>
+          <option value="">Nhà Đinh</option>
+          <option value="">Nhà Tiền Lê</option>
+          <option value="">Nhà Lý</option>
+          <option value="">Nhà Trần</option>
+          <option value="">Nhà Hồ</option>
+          <option value="">Nhà Hậu Trần</option>
+          <option value="">Bắc Thuộc Lần IV</option>
+          <option value="">Nhà Hậu Lê</option>
+          <option value="">Nam Bắc Triều</option>
+          <option value="">Trịnh Nguyễn Phân Tranh</option>
+          <option value="">Nhà Tây Sơn</option>
+          <option value="">Nhà Nguyễn</option>
+          <option value="">Pháp Thuộc</option>
+          <option value="">Việt Nam Dân Chủ Cộng Hòa</option>
+          <option value="">Cộng Hòa Xã Hội Chủ Nghĩa Việt Nam</option>
+        </select>
+      </div>
+      <!-- bản đồ -->
+      <div class="main-contain-directional-map ">
+        <div class="main-contain-directional-map__title">
+          <i class="fas fa-map-signs"></i>Lãnh thổ Việt Nam qua các thời
+        </div>
+        <div class="main-contain-directional-map__img">
+          <img src="./images/ban-do-lanh-tho-viet-nam-qua-cac-thoi-ky.jpg" alt="">
+        </div>
+      </div>
+      <div class="main-contain-directional-news">
+        <div class="main-contain-directional-map__title news-title">
+          <i class="fas fa-map-signs"></i>Bài viết mới
+        </div>
+        <div class="main-contain-directional-news-list">
+          <a href="">Lăng Thiệu Trị (Xương Lăng)</a>
+          <a href="">Tình sử vua Duy Tân, đãi cát tìm người trong mộng</a>
+          <a href="">Vua Duy Tân (Nguyễn Phúc Vĩnh An)</a>
+          <a href="">Bát Trân xưa, 8 món ăn quý nhất của người việt</a>
+          <a href="">Thịt dê và ẩm thực cung đình nhà Nguyễn</a>
+          <a style="border: none;" href="">Con số 13 bí ẩn gắn liền với vị vui Bảo Đại</a>
+        </div>
+      </div>
+      <div class="main-contain-directional-news">
+        <div class="main-contain-directional-map__title news-title">
+          <i class="fas fa-map-signs"></i>Tư liệu
+        </div>
+        <div class="main-contain-directional-news-list">
+          <a href="">Trận điện biên phủ trên không năm 1972</a>
+          <a href="">Chiến tranh biên giới Tây Nam 1975-1978</a>
+          <a href="">Chiến dịch mùa xuân năm 1975</a>
+          <a href="">Trận Đồi Thịt Băm năm 1969</a>
+          <a href="">Lãnh thổ Việt Nam qua từng thời kì</a>
+          <a href="">Lịch sử chữ viết Tiếng Việt</a>
+          <a href="">Hịch tướng sỹ </a>
+          <a href="">Danh sách tướng sỹ Việt Nam </a>
+          <a href="">Quan hệ Việt - Nga </a>
+          <a style="border: none;" href="">Trận Rạch Gầm - Xoài Mút năm 1785</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--footer start----------------------------------------------------->
+  <footer>
+    <div class="footer-contact">
+      <div class="footer-contact-row">
+        <div class="footer-contact-column">
+          <div class="footer-contact-column__title">
+            <h1>Liên lạc</h1>
+          </div>
+          <div class="footer-contact-column__list">
+            <div class="list-text">
+              <p>Đừng bỏ lỡ những thông tin cập nhật mới nhất của chúng tôi !</p>
+            </div>
+            <div class="list-input"><input type="text" name="" id="" placeholder="Tên của bạn" required></div>
+            <div class="list-input"><input type="text" name="" id="" placeholder="Email của bạn" required></div>
+            <div class="list-input"><input type="text" name="" id="" placeholder="SĐT của bạn" required></div>
+            <div class="list-btn">
+              <p>Nhận thông báo</p>
+            </div>
+          </div>
+        </div>
+        <div class="footer-contact-column ">
+          <div class="footer-contact-column__title">
+            <h1>Địa chỉ</h1>
+          </div>
+          <div class="footer-contact-column__list">
+            <div class="footer-contact-column__list-item">
+              <i class="fas fa-home"></i> <a href="#"> Địa chỉ số 91 nguyễn chí thanh</a>
+            </div>
+            <div class="footer-contact-column__list-item">
+              <i class="fas fa-home"></i> <a href="#"> Địa chỉ số 91 nguyễn chí thanh</a>
+            </div>
+            <div class="footer-contact-column__list-item">
+              <i class="fas fa-home"></i> <a href="#"> Địa chỉ số 91 nguyễn chí thanh</a>
+            </div>
+            <div class="footer-contact-column__list-item">
+              <i class="fas fa-home"></i> <a href="#"> Địa chỉ số 91 nguyễn chí thanh</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-contact-column ">
+          <div class="footer-contact-column__title">
+            <h1>Theo dõi chúng tôi</h1>
+          </div>
+          <div class="footer-contact-column__list">
+            <div class="footer-contact-column__list-item">
+              <li><i class="fab fa-twitter"></i></li>
+              <li><i class="fab fa-facebook"></i></li>
+              <li><i class="fab fa-instagram"></i></li>
+              <li><i class="fab fa-youtube"></i></li>
+              <li><i class="fab fa-viber"></i></li>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--footer end----------------------------------------------------->
+
+  <!--copyright start----------------------------------------------------->
+
+  <div class="footer-copyright">
+    <div class="footer-copyright__content">
+      <div class="footer-copyright__content-text">
+        <p>Bản quyền © 2020, <a href="ine.com">I&E Corp</a></p>
+      </div>
+      <div class="footer-copyright__content-menu">
+        <a href="">Trang chủ</a>
+        <a href="">Điều khoản</a>
+        <a href="">Chính sách bảo mật</a>
+        <a href="">Liên hệ</a>
+      </div>
+    </div>
+  </div>
+  <!--copyright end----------------------------------------------------->
+
+  <div class="scrolltop">
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+  </div>
+  <!-- js-->
+  <script src="assets/js/util.js"></script> <!-- util functions included in the CodyHouse framework -->
+  <script src="assets/js/swipe-content.js"></script> <!-- A Vanilla JavaScript plugin to detect touch interactions -->
+  <script src="assets/js/main.js"></script>
+  <!--CDN bootstrap 4-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <!--CDN bootstrap 4-->
+  <script src="./js/suviet.js"></script>
+</body>
+
+</html>
